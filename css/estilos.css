@@ -4,11 +4,22 @@ html {
 .clear {
   clear: both; }
 
-header .navbar {
+header .navbar.home {
+  padding-top: 43px;
   font-family: 'roboto_slabbold'; }
+  header .navbar.home a.lupa {
+    margin-right: 50px;
+    display: none;
+    text-decoration: none; }
+    header .navbar.home a.lupa .ico-buscador::before {
+      color: #2a3b7d;
+      font-size: 20px; }
 
 .navbar-brand img {
-  max-width: 232px; }
+  max-width: 236px; }
+
+.navbar-brand img.scroll {
+  display: none; }
 
 .navbar-inverse .navbar-nav .nav-link,
 .navbar-inverse .navbar-nav .nav-link:hover,
@@ -19,6 +30,55 @@ header .navbar {
 
 .navbar-inverse .navbar-nav .nav-link:hover {
   border-bottom: 3px solid #b8182b; }
+
+header .info {
+  position: absolute;
+  width: 100%;
+  min-height: 37px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  font-family: 'robotoregular';
+  font-size: 0.86rem;
+  color: #FFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  header .info .container {
+    min-height: 37px; }
+    header .info .container > div {
+      float: right;
+      margin-top: 7px; }
+  header .info span {
+    padding-right: 11px; }
+    header .info span b {
+      font-family: 'robotobold';
+      font-weight: normal; }
+  header .info .carrito {
+    position: relative; }
+    header .info .carrito span.ico-carrito {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 21px;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0 0 0 11px; }
+    header .info .carrito .ico-carrito.active {
+      border-left: 1px solid #444444; }
+    header .info .carrito span.punto {
+      position: absolute;
+      display: none;
+      height: 10px;
+      width: 10px;
+      top: -2px;
+      right: -5px;
+      background-color: #f43b3b;
+      border-radius: 10px; }
+header h5 {
+  display: inline-block;
+  font-size: 0.86rem;
+  margin-top: 11px; }
+
+.ico-carrito.active::before {
+  color: #2a3b7d; }
 
 #carrusel-principal .carousel-item img.d-block {
   width: 100%; }
@@ -92,8 +152,79 @@ header .navbar {
 #carrusel-principal .carousel-item.active {
   opacity: 1; }
 
-.hola .container {
-  background-color: purple; }
+.form-control::-webkit-input-placeholder {
+  color: #cdd4dc; }
+
+.form-control:-moz-placeholder {
+  color: #cdd4dc; }
+
+.form-control::-moz-placeholder {
+  color: #cdd4dc; }
+
+.form-control:-ms-input-placeholder {
+  color: #cdd4dc; }
+
+form {
+  margin-top: -40px; }
+  form .container {
+    padding: 0 75px; }
+    form .container .row {
+      border-radius: 4px;
+      -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+              box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+      background-color: #ffffff; }
+      form .container .row div {
+        padding: 0; }
+        form .container .row div .form-control {
+          height: 80px !important;
+          border: none;
+          font-family: 'robotoregular';
+          font-size: 1.14rem;
+          width: 100% !important;
+          color: #444444; }
+        form .container .row div input[type="text"] {
+          padding: 7px 37px; }
+        form .container .row div .select {
+          width: 100%;
+          overflow: hidden;
+          background: #fff url("../img/flecha_abajo.svg") no-repeat 90% center;
+          font-size: 1.14rem;
+          font-family: 'robotoregular'; }
+          form .container .row div .select select {
+            padding: 5px 8px 5px 38px;
+            width: 130%;
+            font-size: 1.14rem;
+            border: none;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            background-color: transparent;
+            background-image: none;
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none; }
+          form .container .row div .select .border {
+            display: inline-block;
+            height: 57px;
+            width: 1px;
+            margin: 11px;
+            background-color: #cdd4dd; }
+        form .container .row div select.form-control.placeholder {
+          color: #cdd4dc; }
+        form .container .row div select.form-control {
+          color: #444444; }
+    form .container button.btn-primary {
+      height: 80px;
+      width: 101%;
+      background: url("../img/lupa.svg") center center no-repeat;
+      background-size: 24px 24px;
+      background-color: #56a232;
+      border: none;
+      text-indent: -9999px;
+      cursor: pointer;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
+    form .container button.btn-primary:hover {
+      background-color: #27600b; }
 
 footer {
   position: relative;
@@ -397,5 +528,73 @@ footer {
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         text-transform: uppercase; }
+
+.municipio-mes .container-responsive .row {
+  margin-right: 0; }
+.municipio-mes .container-responsive .row > div {
+  background-color: #b8182b; }
+.municipio-mes .container-responsive img {
+  width: 100%; }
+.municipio-mes .container-responsive .informacion {
+  text-align: center;
+  color: #FFF;
+  padding: 35px 17.5px; }
+  .municipio-mes .container-responsive .informacion div.flex-parent {
+    width: 100%;
+    max-width: 430px;
+    height: 100%;
+    border: 1px solid #CD5D6B;
+    padding: 0 21px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal; }
+  .municipio-mes .container-responsive .informacion h2 {
+    font-family: 'roboto_slabbold';
+    font-size: 2.86rem;
+    color: #f4d101; }
+    .municipio-mes .container-responsive .informacion h2 span {
+      display: inline-block;
+      height: 1px;
+      width: 36px;
+      background-color: #f4d101;
+      vertical-align: middle;
+      margin: 0 10px; }
+  .municipio-mes .container-responsive .informacion h3 {
+    font-size: 1.43rem;
+    font-family: 'robotomedium';
+    margin-bottom: 31px; }
+  .municipio-mes .container-responsive .informacion p {
+    line-height: 22px;
+    margin-bottom: 28px; }
+  .municipio-mes .container-responsive .informacion a.btn-primary {
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+    font-family: 'roboto_slabregular';
+    font-size: 1.08rem;
+    border-radius: 8px;
+    padding: 11px 1.6rem 10px;
+    width: 140px !important; }
+  .municipio-mes .container-responsive .informacion a:hover {
+    background-color: #f4d101;
+    border-color: #f4d101; }
+
+.flex-parent {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-child {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 /*# sourceMappingURL=estilos.css.map */
