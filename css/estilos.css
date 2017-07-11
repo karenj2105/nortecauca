@@ -1,5 +1,7 @@
 html {
-  font-size: 14px;
+  font-size: 14px; }
+
+body {
   font-family: 'robotoregular'; }
 
 .clear {
@@ -182,13 +184,14 @@ form {
         form .container .row div .select {
           width: 100%;
           overflow: hidden;
-          background: #fff url("../img/flecha_abajo.svg") no-repeat 90% center;
+          background: #fff url("../img/flecha_abajo.svg") no-repeat 93% center;
           font-size: 1.14rem;
           font-family: 'robotoregular'; }
           form .container .row div .select select {
-            padding: 5px 8px 5px 38px;
+            padding: 5px 8px 5px 25px;
             width: 130%;
             font-size: 1.14rem;
+            line-height: 5rem;
             border: none;
             -webkit-box-shadow: none;
                     box-shadow: none;
@@ -584,5 +587,43 @@ footer {
   .municipio-mes .container-responsive .informacion a:hover {
     background-color: #f4d101;
     border-color: #f4d101; }
+
+/* Estilos pagimas internas */
+.interna {
+  padding-top: 300px;
+  background-color: #F9FAFB;
+  /* Estilos miga de pan */
+  /* Estilos contenido */ }
+  .interna .miga {
+    color: #8f97a2;
+    margin-bottom: 2.2rem; }
+    .interna .miga .d-inline-block {
+      vertical-align: top; }
+    .interna .miga .breadcrumb {
+      background-color: transparent; }
+      .interna .miga .breadcrumb .breadcrumb-item {
+        color: #419cff; }
+        .interna .miga .breadcrumb .breadcrumb-item a {
+          color: #419cff; }
+        .interna .miga .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+          padding-right: 0.3rem;
+          padding-left: 0.3rem;
+          color: #8f97a2;
+          content: ">"; }
+      .interna .miga .breadcrumb .active {
+        font-family: 'robotomedium'; }
+  .interna .content {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3); }
+    .interna .content h2 {
+      padding: 1.15rem 2.93rem 1.3rem;
+      background-color: #56a232;
+      font-size: 2.15rem;
+      color: white;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px; }
 
 /*# sourceMappingURL=estilos.css.map */
