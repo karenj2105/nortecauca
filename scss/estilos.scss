@@ -1,11 +1,31 @@
 html {
 	font-size: 14px;
+	font-family: 'robotoregular';
 }
 .clear {
 	clear: both;
 }
+h2, h3 {
+	font-family: 'roboto_slabbold';
+}
 header {
-	.navbar.home {
+	.navbar-inverse .navbar-nav .nav-link,
+	.navbar-inverse .navbar-nav .nav-link:hover,
+	.navbar-inverse .navbar-nav .nav-link:focus {
+		font-size: 0.93rem;
+		color: rgba(255, 255, 255, 1);
+		border-bottom: 3px solid transparent;
+	}
+	.navbar-inverse .navbar-nav .nav-link:hover {
+		border-bottom: 3px solid rgba(184, 24, 43, 1);
+	}
+	.navbar-brand img {
+		max-width: 236px;
+	}
+	.navbar-brand img.scroll {
+		display: none;
+	}
+	.navbar {
 		padding-top: 43px;
 		font-family: 'roboto_slabbold';
 		a.lupa {
@@ -18,24 +38,6 @@ header {
 			}
 		}
 	}
-}
-.navbar-brand img {
-	max-width: 236px;
-}
-.navbar-brand img.scroll {
-	display: none;
-}
-.navbar-inverse .navbar-nav .nav-link,
-.navbar-inverse .navbar-nav .nav-link:hover,
-.navbar-inverse .navbar-nav .nav-link:focus {
-	font-size: 0.93rem;
-	color: rgba(255, 255, 255, 1);
-	border-bottom: 3px solid transparent;
-}
-.navbar-inverse .navbar-nav .nav-link:hover {
-	border-bottom: 3px solid rgba(184, 24, 43, 1);
-}
-header {
 	.info {
 		position: absolute;
 		width: 100%;
@@ -92,20 +94,41 @@ header {
 		margin-top: 11px;
 	}
 }
-
 .ico-carrito.active::before {
 	color: rgba(42, 59, 125, 1);
 }
-#carrusel-principal .carousel-item img.d-block {
-	width: 100%;
-}
-#carrusel-principal .carousel-caption.d-md-block {
-	max-width: 631px;
-	right: 30%;
-	left: 30%;
-	bottom: 115px;
-}
-	#carrusel-principal .carousel-caption {
+ /* Estilos carrusel principal */
+
+#carrusel-principal {
+	.carousel-item {
+			opacity: 0.85;
+			transition: opacity 0.9s ease-in-out;
+		img.d-block {
+			width: 100%;
+		}
+		.sombra {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100% !important;
+			height: auto;
+			background: -webkit-linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
+			background: -moz-linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
+			background: -o-linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
+			background: linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
+			z-index: 5;
+		}
+	}
+	.carousel-item.active {
+		opacity: 1;
+	}
+	.carousel-caption.d-md-block {
+		max-width: 631px;
+		right: 30%;
+		left: 30%;
+		bottom: 115px;
+	}
+	.carousel-caption {
 		h4 {
 			font-family: 'roboto_slabbold';
 			font-size: 1.45rem;
@@ -114,7 +137,6 @@ header {
 			margin-bottom: 0.4rem;
 		}
 		h3 {
-			font-family: 'roboto_slabbold';
 			font-size: 3.15rem;
 			text-transform: uppercase;
 			margin-bottom: 1.5rem;
@@ -145,18 +167,7 @@ header {
 				border-color: rgba(184, 24, 43, 1);
 			}
 		}
-	}
-#carrusel-principal .carousel-item .sombra {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100% !important;
-	height: auto;
-	background: -webkit-linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
-	background: -moz-linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
-	background: -o-linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
-	background: linear-gradient(-180deg, rgba(0, 30, 81, 1) 0%, rgba(0, 0, 0, 0) 100%);
-	z-index: 5;
+	} 
 }
 #carrusel-principal .carousel-control-prev-icon, #carrusel-principal .carousel-control-next-icon {
 	background-image: none;
@@ -174,13 +185,7 @@ header {
 	transform: rotate(135deg);
 }
 
-#carrusel-principal .carousel-item {
-	opacity: 0.85;
- 	transition: opacity 0.9s ease-in-out;
-}
-#carrusel-principal .carousel-item.active {
-	opacity: 1;	
-}
+/* Estilos formulario de busqueda */
 
 .form-control::-webkit-input-placeholder { color:  rgba(205, 212, 220, 1);}
 .form-control:-moz-placeholder { color:  rgba(205, 212, 220, 1);}
@@ -190,75 +195,76 @@ form {
 	margin-top: -40px;
 	.container {
 		padding: 0 75px;
-	.row {
-		border-radius: 4px;
-		box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
-		background-color: #ffffff;
-		div {
-			padding: 0;
-			.form-control {
-				height: 80px !important;
-				border: none;
-				font-family: 'robotoregular';
-				font-size: 1.14rem;
-				width: 100% !important;
-				color: rgba(68, 68, 68, 1);
-			}
-			input[type="text"] {
-				padding: 7px 37px;
-			}
-			.select {
-				width: 100%;
-				overflow: hidden;
-				background: #fff url("../img/flecha_abajo.svg") no-repeat 90% center;
-				font-size: 1.14rem;
-				font-family: 'robotoregular';				
-				select {
-					padding: 5px 8px 5px 38px;
-					width: 130%;
-					font-size: 1.14rem;
+		.row {
+			border-radius: 4px;
+			box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+			background-color: #ffffff;
+			div {
+				padding: 0;
+				.form-control {
+					height: 80px !important;
 					border: none;
-					box-shadow: none;
-					background-color: transparent;
-					background-image: none;
-					appearance: none;
+					font-family: 'robotoregular';
+					font-size: 1.14rem;
+					width: 100% !important;
+					color: rgba(68, 68, 68, 1);
 				}
-				.border {
-					display: inline-block;
-					height: 57px;
-					width: 1px;
-					margin: 11px;
-					background-color: rgba(205, 212, 221, 1);
-				}	
+				input[type="text"] {
+					padding: 7px 37px;
+				}
+				.select {
+					width: 100%;
+					overflow: hidden;
+					background: #fff url("../img/flecha_abajo.svg") no-repeat 90% center;
+					font-size: 1.14rem;
+					font-family: 'robotoregular';				
+					select {
+						padding: 5px 8px 5px 38px;
+						width: 130%;
+						font-size: 1.14rem;
+						border: none;
+						box-shadow: none;
+						background-color: transparent;
+						appearance: none;
+					}
+					.border {
+						display: inline-block;
+						height: 57px;
+						width: 1px;
+						margin: 11px;
+						background-color: rgba(205, 212, 221, 1);
+					}	
+				}
+				select.form-control.placeholder {
+					color: rgba(205, 212, 220, 1);
+				}
+				select.form-control {
+					color: rgba(68, 68, 68, 1);
+				}
 			}
-			select.form-control.placeholder {
-				color: rgba(205, 212, 220, 1);
+			button.btn-primary {
+				height: 80px;
+				width: 101%;
+				background: url('../img/lupa.svg') center center no-repeat;
+				background-size: 24px 24px;
+				background-color: rgba(86, 162, 50, 1);
+				border: none;
+				text-indent: -9999px;
+				cursor: pointer;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
 			}
-			select.form-control {
-				color: rgba(68, 68, 68, 1);
+			button.btn-primary:hover {
+				background-color: rgba(39, 96, 11, 1);
 			}
-		}
+		}	
 	}
-	button.btn-primary {
-		height: 80px;
-		width: 101%;
-		background: url('../img/lupa.svg') center center no-repeat;
-		background-size: 24px 24px;
-		background-color: rgba(86, 162, 50, 1);
-		border: none;
-		text-indent: -9999px;
-		cursor: pointer;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-	}
-	button.btn-primary:hover {
-		background-color: rgba(39, 96, 11, 1);
-	}	
 }
-}
+
+/* EStilos footer */
+
 footer {
-	position: relative;
-	height: 556px;
+	position: relative;	
 	background-color: rgba(41, 58, 125, 1);
 	.redes {
 		background-color: #FFF;
@@ -320,7 +326,6 @@ footer {
 	}
 	h3 {
 		font-size: 0.94rem;
-		font-family: 'roboto_slabbold';
 		line-height: 21px;
 		color: rgba(65, 156, 255, 1);
 	}
@@ -347,124 +352,8 @@ footer {
 	}
 }
 
-.interes {
-	background-color: #F9FAFB;
-	padding-bottom: 3.6rem;
-	.container {
-		h2 {
-			width: 100%;
-			font-family: 'roboto_slabbold';
-			font-size: 3.1rem;
-			color: rgba(143, 151, 162, 1);
-			margin: 5rem 0 4.6rem;
-		}
-		.col-md-3 {
-			margin-bottom: 30px;
-			img {
-				border-top-right-radius: 4px;
-				border-top-left-radius: 4px;
-			}
-			div {
-				background-color: #ffffff;
-				border-radius: 4px;
-				box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-				padding-bottom: 20px;
-			}
-			h3 {
-				font-family: 'roboto_slabbold';
-				font-size: 1.29rem;
-				color: rgba(184, 24, 43, 1);
-				margin-bottom: 5px;
-				margin-top: 17px;
-			}
-			span {
-				font-family: 'robotoregular';
-				font-size: 1rem;
-				color: rgba(143, 151, 162, 1);
-				margin-bottom: 22px;
-			}
+/* Estilos carruseles*/
 
-			a.btn {
-				background-color: transparent;
-				border-color: rgba(86, 162, 50, 1);
-				color: rgba(86, 162, 50, 1);
-				font-family: 'roboto_slabregular';
-				font-size: 1.08rem;
-				border-radius: 8px;
-				padding: 11px 1.6rem 10px;
-			}
-			a.btn:hover {
-				background-color: rgba(86, 162, 50, 1);
-				color: #FFFFFF;
-			}
-		}
-	}
-}
-.nuestros-mun {
-	background-image: url("../img/nuestrosmuni.jpg");
-	background-size: 100%;
-	/*background: linear-gradient(-180deg, rgba(41, 58, 125, 0.45) 0%, rgba(31, 45, 103, 1) 100%);*/
-	padding-bottom: 66px;
-	.container {
-		h2 {
-			width: 100%;
-			font-family: 'roboto_slabbold';
-			color: #fff;
-			font-size: 3.1rem;
-			margin: 5rem 0 4.6rem;
-		}
-		.col-md-6 {
-			> div {
-				border-radius: 4px;
-				box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-				background-color: rgba(86, 162, 50, 1);
-			}
-			h3 {
-				font-family: 'roboto_slabbold';
-				font-size: 1.73rem;
-				color: rgba(39, 96, 12, 1);
-			}
-			p {
-				font-family: 'robotoregular';
-				font-size: 1rem;
-				line-height: 22px;
-				color: #fff;
-			}
-			.informacion {
-				position: relative;
-				display: inline-block;
-				width: 49%;
-				padding: 24px;
-			}
-			img {
-				display: inline-block;
-				width: 50%;
-				float: right;
-				border-top-right-radius: 4px;
-				border-bottom-right-radius: 4px;
-			}
-			a {
-				position: absolute;
-				right: 23px;
-				font-family: 'robotoregular';
-				color: rgba(244, 209, 1, 1);
-				font-size: 1rem;
-				text-align: left;
-				span {
-					vertical-align: middle;
-					margin-left: 7px;
-				}
-			}
-			a:hover {
-				text-decoration: none;
-				color: #fff;
-				span:before {
-					color: #fff;
-				}
-			}
-		}
-	}
-}
 .carruseles {
 	padding: 90px 0 40px;
 	.container .row > div {
@@ -473,7 +362,6 @@ footer {
 	}
 	h2 {
 		width: 100%;
-		font-family: 'roboto_slabbold';
 		font-size: 1.72rem;
 		color: rgba(205, 212, 220, 1);
 		text-align: left;
@@ -481,7 +369,7 @@ footer {
 	}
 	a {
 		position: absolute;
-		top: 5px;
+		top: 4px;
 		right: 18px;
 		font-family: 'robotoregular';
 		font-size: 1.08rem;
@@ -572,11 +460,11 @@ footer {
 		position: absolute;
 		bottom: 30px;
 		left: 0;
-		font-family: 'roboto_slabbold';
 		font-size: 1.72rem;
 		line-height: 32px;
 		z-index: 20;
 		text-align: left;
+		color: #fff;
 	}
 	img {
 	}
@@ -622,6 +510,131 @@ footer {
 		}
 	}
 }
+
+/* Estilos nuestros municipios */
+
+.nuestros-mun {
+	background-image: url("../img/nuestrosmuni.jpg");
+	background-size: 100%;	
+	.degradado {
+		background: linear-gradient(-180deg, rgba(41, 58, 125, 0.45) 0%, rgba(31, 45, 103, 1) 100%);
+		padding-bottom: 66px;
+	}
+	.container {
+		h2 {
+			width: 100%;
+			color: #fff;
+			font-size: 3.1rem;
+			margin: 5rem 0 4.6rem;
+		}
+		.col-md-6 {
+			> div {
+				border-radius: 4px;
+				box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+				background-color: rgba(86, 162, 50, 1);
+			}
+			h3 {
+				font-size: 1.73rem;
+				color: rgba(39, 96, 12, 1);
+			}
+			p {
+				font-family: 'robotoregular';
+				font-size: 1rem;
+				line-height: 22px;
+				color: #fff;
+			}
+			.informacion {
+				position: relative;
+				display: inline-block;
+				width: 49%;
+				padding: 24px;
+			}
+			img {
+				display: inline-block;
+				width: 50%;
+				float: right;
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
+			a {
+				position: absolute;
+				right: 23px;
+				font-family: 'robotoregular';
+				color: rgba(244, 209, 1, 1);
+				font-size: 1rem;
+				text-align: left;
+				span {
+					vertical-align: middle;
+					margin-left: 7px;
+				}
+			}
+			a:hover {
+				text-decoration: none;
+				color: #fff;
+				span:before {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+/* Estilos te puede interrsar*/
+
+.interes {
+	background-color: #F9FAFB;
+	padding-bottom: 3.6rem;
+	.container {
+		h2 {
+			width: 100%;
+			font-size: 3.1rem;
+			color: rgba(143, 151, 162, 1);
+			margin: 5rem 0 4.6rem;
+		}
+		.col-md-3 {
+			margin-bottom: 30px;
+			img {
+				border-top-right-radius: 4px;
+				border-top-left-radius: 4px;
+			}
+			div {
+				background-color: #ffffff;
+				border-radius: 4px;
+				box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+				padding-bottom: 20px;
+			}
+			h3 {
+				font-size: 1.29rem;
+				color: rgba(184, 24, 43, 1);
+				margin-bottom: 5px;
+				margin-top: 17px;
+			}
+			span {
+				font-family: 'robotoregular';
+				font-size: 1rem;
+				color: rgba(143, 151, 162, 1);
+				margin-bottom: 22px;
+			}
+
+			a.btn {
+				background-color: transparent;
+				border-color: rgba(86, 162, 50, 1);
+				color: rgba(86, 162, 50, 1);
+				font-family: 'roboto_slabregular';
+				font-size: 1.08rem;
+				border-radius: 8px;
+				padding: 11px 1.6rem 10px;
+			}
+			a.btn:hover {
+				background-color: rgba(86, 162, 50, 1);
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+/* Estilos municipio del mes */
+
 .municipio-mes {
 	.container-responsive {
 		.row {
@@ -637,17 +650,24 @@ footer {
 			text-align: center;
 			color: #FFF;
 			padding: 35px 17.5px;
-			div.flex-parent {
+			.flex-parent {
 				width: 100%;
 				max-width: 430px;
 				height: 100%;
 				border: 1px solid #CD5D6B;
 				padding: 0 21px;
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;	
+				display: -ms-flex;
+				display: -webkit-flex;
+				display: flex;
+				.flex-child{
+					display: -ms-flex;
+					display: -webkit-flex;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+				}
 			}
 			h2 {
-				font-family: 'roboto_slabbold';
 				font-size: 2.86rem;
 				color: rgba(244, 209, 1, 1);
 				span {
@@ -664,7 +684,7 @@ footer {
 				font-family: 'robotomedium';
 				margin-bottom: 31px;
 			}
-			p{
+			p {
 				line-height: 22px;
 				margin-bottom: 28px;
 			}
@@ -684,18 +704,4 @@ footer {
 			}
 		}
 	}
-}
-
-.flex-parent{
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.flex-child{
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }

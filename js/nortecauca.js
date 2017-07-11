@@ -27,7 +27,7 @@
 			$('.info').css('color', 'rgba(42, 59, 125, 1)');
 			$('.info h5').hide();
 			$('.ico-carrito').addClass('active');
-			$('.info span').hide();
+			$('header .info span').hide();
 			$('.carrito span').show();
 			$('header .info .container > div').css('margin-top', '49px');
 			$('a.lupa').css('display', 'inline-block');
@@ -41,7 +41,7 @@
 			$('.info').css('color', 'rgba(255, 255, 255, 1)');
 			$('.info h5').show();
 			$('.ico-carrito').removeClass('active');
-			$('.info span').show();
+			$('header .info span').show();
 			$('.carrito span.punto').hide();
 			$('header .info .container > div').css('margin-top', '7px');
 			$('a.lupa').css('display', 'none');
