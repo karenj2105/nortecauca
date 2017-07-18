@@ -33,6 +33,8 @@ header .navbar {
     header .navbar a.lupa .ico-buscador::before {
       color: #2a3b7d;
       font-size: 20px; }
+  header .navbar a.lupa.blanco .ico-buscador::before {
+    color: #fff; }
 header .info {
   position: absolute;
   width: 100%;
@@ -81,6 +83,9 @@ header h5 {
 
 .ico-carrito.active::before {
   color: #2a3b7d; }
+
+.ico-carrito.interna::before {
+  color: #fff; }
 
 /* Estilos carrusel principal */
 #carrusel-principal .carousel-item {
@@ -349,14 +354,22 @@ footer {
 .carruseles .carousel {
   border-radius: 4px !important;
   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3); }
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+  max-width: 100%; }
+
+#eventos {
+  max-width: 351px; }
 
 .carruseles .carousel-item {
   color: #fff;
   border-radius: 10px;
-  border-radius: 4px !important; }
+  border-radius: 4px !important;
+  overflow: hidden;
+  height: 375px;
+  max-carwidth: 100%; }
   .carruseles .carousel-item img {
-    max-height: 375px;
+    height: 375px;
+    width: 100%;
     border-radius: 4px !important; }
   .carruseles .carousel-item h4 {
     position: absolute;
@@ -459,15 +472,11 @@ footer {
     color: #fff; }
   .nuestros-mun .container .col-md-6 .informacion {
     position: relative;
-    display: inline-block;
-    width: 49%;
-    padding: 24px; }
+    padding: 26px 15px 26px 53px; }
   .nuestros-mun .container .col-md-6 img {
-    display: inline-block;
-    width: 50%;
-    float: right;
     border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px; }
+    border-bottom-right-radius: 4px;
+    height: 300px; }
   .nuestros-mun .container .col-md-6 a {
     position: absolute;
     right: 23px;
@@ -590,6 +599,14 @@ footer {
     border-color: #f4d101; }
 
 /* Estilos pagimas internas */
+.interna {
+  padding-top: 163px;
+  background-color: #F9FAFB; }
+  .interna header .navbar {
+    border-bottom: 5px solid #3886dc; }
+  .interna section {
+    padding-bottom: 50px; }
+
 /* Estilos miga de pan */
 .miga {
   color: #8f97a2;
@@ -638,62 +655,58 @@ footer {
           width: 40px;
           height: 40px; }
 
-.interna {
-  padding-top: 300px;
-  padding-bottom: 50px;
-  background-color: #F9FAFB;
-  /* Estilos contenido */ }
-  .interna .contenido {
+/* Estilos contenido */
+.contenido {
+  width: 100%;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  color: #444444; }
+  .contenido h2 {
+    padding: 1.15rem 2.93rem 1.3rem;
+    background-color: #56a232;
+    font-size: 2.15rem;
+    color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 3px solid #358011;
+    margin: 0; }
+  .contenido h3 {
+    font-size: 2.29rem;
+    line-height: 3.08rem;
+    margin: 5.07rem auto 1rem; }
+  .contenido p.descripcion {
+    font-family: 'robotomedium';
+    font-size: 1.15rem;
+    line-height: 1.79rem;
+    margin-bottom: 0; }
+  .contenido h4 {
+    font-family: 'roboto_slabbold';
+    font-size: 1.72rem;
+    color: #b8182b;
+    margin-bottom: 1.22rem; }
+  .contenido .borde {
     width: 100%;
-    padding-bottom: 60px;
-    background-color: #ffffff;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-    color: #444444; }
-    .interna .contenido h2 {
-      padding: 1.15rem 2.93rem 1.3rem;
-      background-color: #56a232;
-      font-size: 2.15rem;
-      color: white;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      border-bottom: 3px solid #358011;
-      margin: 0; }
-    .interna .contenido h3 {
-      font-size: 2.29rem;
-      line-height: 3.08rem;
-      margin: 5.07rem auto 1rem; }
-    .interna .contenido p.descripcion {
-      font-family: 'robotomedium';
-      font-size: 1.15rem;
-      line-height: 1.79rem;
-      margin-bottom: 0; }
-    .interna .contenido h4 {
-      font-family: 'roboto_slabbold';
-      font-size: 1.72rem;
-      color: #b8182b;
-      margin-bottom: 1.22rem; }
-    .interna .contenido .borde {
-      width: 100%;
-      max-width: 753px;
-      position: relative;
-      border-bottom: 1px solid #dddfe3;
-      margin: 24px auto 60px; }
-      .interna .contenido .borde span {
-        display: inline-block;
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        width: 32px;
-        height: 10px;
-        background-color: #fff;
-        margin-left: -16px; }
-      .interna .contenido .borde .punto {
-        width: 10px;
-        margin-left: -5px;
-        border-radius: 5px;
-        background-color: #dddfe3; }
+    max-width: 753px;
+    position: relative;
+    border-bottom: 1px solid #dddfe3;
+    margin: 24px auto 60px; }
+    .contenido .borde span {
+      display: inline-block;
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      width: 32px;
+      height: 10px;
+      background-color: #fff;
+      margin-left: -16px; }
+    .contenido .borde .punto {
+      width: 10px;
+      margin-left: -5px;
+      border-radius: 5px;
+      background-color: #dddfe3; }
 
 /* Estilos a donde ir */
 .donde-ir .contenido h3, .donde-ir .contenido p, .donde-ir .contenido h4 {
@@ -704,10 +717,13 @@ footer {
   margin: 5.07rem auto 1rem; }
 .donde-ir .contenido p {
   margin-bottom: 2.57rem; }
-.donde-ir .contenido .container {
+.donde-ir .contenido h4 {
+  margin-bottom: 1.22rem; }
+.donde-ir .contenido .enlaces {
   width: 100%;
-  max-width: 980px; }
-  .donde-ir .contenido .container .row div {
+  max-width: 980px;
+  margin: 0 auto; }
+  .donde-ir .contenido .enlaces div {
     margin-bottom: 35px; }
 .donde-ir .contenido .btn-primary {
   display: table;
@@ -769,18 +785,18 @@ footer {
   width: 100%;
   max-width: 1014px;
   margin: 5.57rem auto 0; }
-  .lista .row div {
+  .lista div {
     margin-bottom: 75px; }
-  .lista .row h3 {
+  .lista h3 {
     font-size: 1.08rem;
     line-height: 1.72rem;
     margin: 1.36rem 0 0.53rem; }
-    .lista .row h3 a {
+    .lista h3 a {
       color: #444444;
       text-decoration: none; }
-    .lista .row h3 a:hover {
+    .lista h3 a:hover {
       border-bottom: 2px solid #a1a1a1; }
-  .lista .row h4 {
+  .lista h4 {
     display: inline-block;
     font-family: 'robotomedium_italic';
     font-size: 1rem;
@@ -788,7 +804,7 @@ footer {
     color: #fff;
     padding: 9px 7px;
     margin-bottom: 0.64rem; }
-  .lista .row span {
+  .lista span {
     display: block;
     font-size: 0.93rem;
     color: #8f97a2; }
@@ -909,5 +925,267 @@ footer {
     border-right: 1px solid #dedede; }
   .blog-articulo .art-sig-ant div.col-md-6:last-child {
     border-left: 1px solid #dedede; }
+
+/* Estilos de una noticia */
+.noticia .row {
+  width: 100%;
+  max-width: 1050px;
+  margin: 5.14rem auto 0; }
+  .noticia .row .menu {
+    display: block;
+    width: 100%;
+    max-width: 291px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 0.71rem; }
+    .noticia .row .menu li {
+      padding: 0;
+      margin-bottom: 1px;
+      border: none; }
+      .noticia .row .menu li a {
+        display: block;
+        width: 100%;
+        padding: 1.14rem 2.57rem;
+        font-family: 'roboto_slabbold';
+        color: #444444;
+        background-color: #f7f8f9; }
+      .noticia .row .menu li a:hover {
+        background-color: #8f97a2;
+        color: #fff;
+        text-decoration: none; }
+    .noticia .row .menu .list-group-item.active {
+      border-color: #8f97a2; }
+      .noticia .row .menu .list-group-item.active a {
+        color: #fff;
+        background-color: #8f97a2; }
+    .noticia .row .menu li:first-child a {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px; }
+    .noticia .row .menu li:last-child {
+      margin-bottom: 0; }
+      .noticia .row .menu li:last-child a {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px; }
+  .noticia .row h3 {
+    font-size: 2.71rem;
+    line-height: 3.14rem;
+    margin-bottom: 0.43rem; }
+  .noticia .row span {
+    display: inline-block;
+    font-size: 0.93rem; }
+  .noticia .row .municipio {
+    color: #f99c17;
+    padding-right: 0.8rem;
+    margin-bottom: 1.14rem; }
+  .noticia .row .fecha {
+    color: #cdd4dc;
+    border-left: 1px solid #cdd4dc;
+    padding-left: 0.8rem; }
+  .noticia .row .foto {
+    font-size: 0.86rem;
+    color: #8f97a2;
+    font-family: 'robotoitalic';
+    display: block;
+    text-align: right;
+    margin: 0.93rem 0 1.93rem; }
+  .noticia .row p {
+    line-height: 1.72rem;
+    margin-bottom: 1.86rem; }
+  .noticia .row .float {
+    float: left;
+    max-width: 261px;
+    margin: 8px 26px 18px 0; }
+
+.col-md-8 > ul {
+  margin-bottom: 21px; }
+  .col-md-8 > ul li {
+    position: relative;
+    padding-left: 1.79rem;
+    margin-bottom: 3px; }
+    .col-md-8 > ul li .ico-flecha {
+      position: absolute;
+      left: 0;
+      top: 5px; }
+    .col-md-8 > ul li .ico-flecha::before {
+      color: #b8182b;
+      font-size: 1rem; }
+
+.col-md-8 .descarga {
+  margin: 3.07rem 0 3rem; }
+  .col-md-8 .descarga li {
+    position: relative;
+    border-radius: 3px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
+    padding: 1.18rem 1.93rem 1.18rem 1.93rem;
+    margin-bottom: 8px; }
+    .col-md-8 .descarga li a {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 110px;
+      display: table;
+      background-color: #b8182b;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+      .col-md-8 .descarga li a .ico-descarga {
+        display: table-cell;
+        vertical-align: middle; }
+      .col-md-8 .descarga li a .ico-descarga:before {
+        font-size: 17px; }
+    .col-md-8 .descarga li a:hover {
+      text-decoration: none;
+      background-color: #db7a11; }
+
+.col-md-8 .destacados {
+  margin-bottom: 60px; }
+  .col-md-8 .destacados li {
+    padding: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+    margin-bottom: 8px; }
+    .col-md-8 .destacados li a {
+      display: block;
+      width: 100%;
+      border-radius: 3px;
+      -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
+              box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
+      padding: 1.18rem 3.93rem 1.18rem 1.93rem;
+      color: #444444; }
+      .col-md-8 .destacados li a .ico-flecha {
+        left: auto;
+        right: 32px;
+        top: 50%;
+        margin-top: -7px; }
+    .col-md-8 .destacados li a:hover {
+      text-decoration: none;
+      -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+              box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4); }
+      .col-md-8 .destacados li a:hover .ico-flecha:before {
+        color: #db7a11; }
+
+.table {
+  margin-top: 2.64rem; }
+  .table thead th {
+    border-bottom: none; }
+  .table td:last-child, .table th:last-child {
+    text-align: center; }
+  .table th, .table td {
+    padding: 1.04rem;
+    border-top: none; }
+  .table th:first-child {
+    padding-left: 6.07rem; }
+  .table td:first-child {
+    padding-left: 3.57rem; }
+
+.thead-default th {
+  color: #fff;
+  background-color: #b8182b;
+  font-family: 'alegreyasans_bold';
+  font-size: 1.29rem; }
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: transparent; }
+
+.table-striped tbody tr:nth-of-type(2n) {
+  background-color: rgba(181, 188, 198, 0.09);
+  border-top: 1px solid rgba(181, 188, 198, 0.28);
+  border-bottom: 1px solid rgba(181, 188, 198, 0.28); }
+
+/* Estilos Municipio */
+.municipio .row {
+  width: 100%;
+  max-width: 950px;
+  margin: 8.28rem auto 0; }
+  .municipio .row p {
+    line-height: 1.72rem;
+    margin-bottom: 1.86rem; }
+  .municipio .row .float {
+    float: left;
+    max-width: 261px;
+    margin: 8px 26px 18px 0; }
+  .municipio .row .sub-menu {
+    margin-top: 5px; }
+    .municipio .row .sub-menu li {
+      margin-bottom: 10px;
+      padding: 0;
+      border: none; }
+      .municipio .row .sub-menu li a {
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        font-family: 'roboto_slabbold';
+        font-size: 1.07rem;
+        background-color: #db7a11;
+        border-radius: 8px;
+        padding: 0.99rem 0; }
+      .municipio .row .sub-menu li a:hover {
+        text-decoration: none;
+        background-color: #9c570d; }
+.municipio .informacion {
+  position: relative;
+  max-width: 100%;
+  min-height: 349px;
+  background: url("../img/marca_nuestrosmunicipios.png") left 6px no-repeat;
+  background-color: rgba(86, 162, 50, 0.1);
+  margin: 0; }
+  .municipio .informacion .col-md-12 {
+    max-width: 950px;
+    margin: 0 auto; }
+    .municipio .informacion .col-md-12 h3, .municipio .informacion .col-md-12 p {
+      max-width: 560px; }
+    .municipio .informacion .col-md-12 h3 {
+      margin: 5.07rem auto 1.29rem 0; }
+  .municipio .informacion .marco {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    background-color: white;
+    border: 1px solid #d6d6d6;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    padding: 1.21rem;
+    width: 305px;
+    min-height: 378px;
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+    overflow: hidden; }
+    .municipio .informacion .marco img {
+      max-width: auto;
+      height: 286px; }
+    .municipio .informacion .marco h4 {
+      text-align: center;
+      font-family: 'yellowtail';
+      font-size: 1.57rem;
+      color: #444444;
+      margin: 1.42rem 0 1rem; }
+.municipio .galeria {
+  margin: 1.86rem 0 3.57rem; }
+  .municipio .galeria div {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 15px; }
+  .municipio .galeria a {
+    display: inline-block;
+    max-width: 164px;
+    height: 115px; }
+    .municipio .galeria a img {
+      height: 100%; }
+  .municipio .galeria a:hover {
+    outline-style: solid;
+    outline-color: rgba(205, 212, 220, 0.6);
+    outline-width: 5px; }
+
+@media (max-width: 780px) {
+  .carruseles .carousel-item {
+    overflow: hidden;
+    height: 300px; }
+    .carruseles .carousel-item img {
+      height: 300px;
+      width: auto; } }
 
 /*# sourceMappingURL=estilos.css.map */

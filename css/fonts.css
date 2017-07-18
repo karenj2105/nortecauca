@@ -34,6 +34,18 @@
 }
 
 @font-face {
+    font-family: 'robotoitalic';
+    src: url('../fonts/roboto-italic-webfont.eot');
+    src: url('../fonts/roboto-italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/roboto-italic-webfont.woff2') format('woff2'),
+       url('../fonts/roboto-italic-webfont.woff') format('woff'),
+       url('../fonts/roboto-italic-webfont.ttf') format('truetype'),
+       url('../fonts/roboto-italic-webfont.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'roboto_slabbold';
     src: url('../fonts/robotoslab-bold-webfont.eot');
     src: url('../fonts/robotoslab-bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -70,12 +82,36 @@
 }
 
 @font-face {
+    font-family: 'alegreyasans_bold';
+    src: url('../fonts/alegreyasans-bold-webfont.eot');
+    src: url('../fonts/alegreyasans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/alegreyasans-bold-webfont.woff2') format('woff2'),
+       url('../fonts/alegreyasans-bold-webfont.woff') format('woff'),
+       url('../fonts/alegreyasans-bold-webfont.ttf') format('truetype'),
+       url('../fonts/alegreyasans-bold-webfont.svg#alegreyasans_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yellowtail';
+    src: url('../fonts/yellowtail-regular-webfont.eot');
+    src: url('../fonts/yellowtail-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/yellowtail-regular-webfont.woff2') format('woff2'),
+       url('../fonts/yellowtail-regular-webfont.woff') format('woff'),
+       url('../fonts/yellowtail-regular-webfont.ttf') format('truetype'),
+       url('../fonts/yellowtail-regular-webfont.svg#yellowtail') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
   font-family: 'iconos';
-  src:  url('../fonts/iconos.eot?r9ad5m');
-  src:  url('../fonts/iconos.eot?r9ad5m#iefix') format('embedded-opentype'),
-    url('../fonts/iconos.ttf?r9ad5m') format('truetype'),
-    url('../fonts/iconos.woff?r9ad5m') format('woff'),
-    url('../fonts/iconos.svg?r9ad5m#iconos') format('svg');
+  src:  url('../fonts/iconos.eot?og268f');
+  src:  url('../fonts/iconos.eot?og268f#iefix') format('embedded-opentype'),
+    url('../fonts/iconos.ttf?og268f') format('truetype'),
+    url('../fonts/iconos.woff?og268f') format('woff'),
+    url('../fonts/iconos.svg?og268f#iconos') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -95,19 +131,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-flecha_abajo:before {
+.ico-flecha-abajo:before {
   content: "\e900";
   color: #cdd4dd;
 }
 .ico-flecha:before {
-  content: "\e903";
+  content: "\e901";
   color: #f4d101;
 }
-.ico-carrito:before {
+.ico-descarga:before {
   content: "\e902";
   color: #fff;
 }
+.ico-carrito:before {
+  content: "\e903";
+  color: #fff;
+}
 .ico-buscador:before {
-  content: "\ea11";
+  content: "\e904";
   color: #fff;
 }

@@ -24,7 +24,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 	<header>
-		<div class="navbar navbar-toggleable-md navbar-inverse fixed-top home" data-spy="affix" data-offset-top="197">	<div class="info">
+		<div class="navbar navbar-toggleable-md navbar-inverse fixed-top" data-spy="affix" data-offset-top="197">	<div class="info">
 				<div class="container">
 					<h5 class="">Bienvenido al sitio web de la Zona Norte del Cauca</h5>
 					<div class="d-inline-block">
@@ -57,6 +57,7 @@
 				<a class="lupa" href="#buscador"><span class="ico-buscador"></span></a>
 			</div>
 		</div>
+		<div class="borde"></div>
 	</header>
 	
 	<div id="carrusel-principal" class="carousel slide" data-ride="carousel">
@@ -136,6 +137,7 @@
 				<div class="col-md-8">
 					<h2 class="d-inline-block mr-auto">Noticias</h2>
 					<a href="">Ver todas la noticias<span class="ico-flecha"></span></a>
+
 					<div id="noticias" class="carousel slide d-inline-block" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#noticias" data-slide-to="0" class="active"></li>
@@ -143,13 +145,13 @@
 						</ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="carousel-item active">
-								<img class="d-block img-fluid" src="img/foto_01.jpg" alt="First noticia">
+								<img class="d-block" src="img/foto_01.jpg" alt="First noticia"><!--Se elimina la clase img-fluid-->
 								<h4>Santander de Quilichao<span></span></h4>
 								<h3>Titulo de una noticia de uno de los trece municipios del norte del cauca</h3>
 								<div class="sombra carousel-caption"></div>
 							</div>
 							<div class="carousel-item">
-								<img class="d-block img-fluid" src="img/foto_01.jpg" alt="Second noticia">
+								<img class="d-block" src="img/cabezote_01.jpg" alt="Second noticia"><!--Se elimina la clase img-fluid-->
 								<h4>Santander de Quilichao<span></span></h4>
 								<h3>Titulo de una noticia de uno de los trece municipios del norte del cauca</h3>
 								<div class="sombra carousel-caption"></div>
@@ -167,7 +169,7 @@
 						</ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="carousel-item active">
-								<img class="d-block img-fluid" src="img/foto_02.jpg" alt="First evento">
+								<img class="d-block" src="img/foto_02.jpg" alt="First evento"><!--Se elimina la clase img-fluid-->
 								<h4>Miranda<span></span></h4>
 								<div class="info">
 									<div class="fecha d-inline-block"><span>Jun</span>25</div>
@@ -176,7 +178,7 @@
 								<div class="sombra carousel-caption"></div>
 							</div>
 							<div class="carousel-item">
-								<img class="d-block img-fluid" src="img/foto_02.jpg" alt="Second evento">
+								<img class="d-block" src="img/foto_01.jpg" alt="Second evento"><!--Se elimina la clase img-fluid-->
 								<h4>Miranda<span></span></h4>
 								<div class="info">
 									<div class="fecha d-inline-block"><span>Jun</span>25</div>
@@ -196,32 +198,41 @@
 			<div class="container">
 				<h2 class="text-center d-inline-block">&bull; Nuestros municipios tienen para ti &bull;</h2>
 				<div class="row">
+
 					<div class="col-md-6">
 						<div class="d-inline-block">
-							<img class="img-fluid" src="img/foto_03.jpg" alt="img naturaleza">
-							<div class="informacion">
-								<h3 class="mb-3">Naturaleza</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
-								</p>
-								<a href="">Ver más<span class="ico-flecha"></span></a>
+							<div class="row"> <!--Se agrega este div-->
+								<div class="col-md-6 push-md-6"><!--Se agrega clase-->
+									<img class="img-fluid" src="img/foto_03.jpg" alt="img naturaleza">
+								</div>
+								<div class="informacion col-md-6 pull-md-6"><!--Se agrega clase-->
+									<h3 class="mb-3">Naturaleza</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+									</p>
+									<a href="">Ver más<span class="ico-flecha"></span></a>
+								</div><!--Se elimina div con clase clear-->
 							</div>
-							<div class="clear"></div>
 						</div>
 					</div>
-					<div class="col-md-6">
+
+					<div class="col-md-6 d-inline-block">
 						<div class="d-inline-block">
-							<img class="img-fluid" src="img/foto_04.jpg" alt="img gastronomia">
-							<div class="informacion">
-								<h3 class="mb-3">Gastronomía</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
-								</p>
-								<a href="">Ver más<span class="ico-flecha"></span></a>
+							<div class="row"><!--Se agrega este div-->
+								<div class="col-md-6 push-md-6"><!--Se agrega clase-->
+									<img class="img-fluid" src="img/foto_04.jpg" alt="img gastronomia">
+								</div>
+								<div class="informacion col-md-6 pull-md-6"><!--Se agrega clase-->
+									<h3 class="mb-3">Gastronomía</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+									</p>
+									<a href="">Ver más<span class="ico-flecha"></span></a>
+								</div><!--Se elimica div con clase clear-->
 							</div>
-							<div class="clear"></div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
