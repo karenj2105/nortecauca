@@ -29,7 +29,7 @@
 					<h5 class="">Bienvenido al sitio web de la Zona Norte del Cauca</h5>
 					<div class="d-inline-block">
 						<span>Hola, <b>Eliana Muñoz</b></span>
-						<div class="d-inline-block carrito"><span class="ico-carrito"></span><span class="punto"></span></div>
+						<a class="d-inline-block carrito" href="#"><span class="ico-carrito"></span><span class="punto"></span></a>
 					</div>
 				</div>
 			</div>
@@ -75,15 +75,23 @@
 				<h2>Noticias</h2>
 				<div class="row">
 
-					<div class="col-md-4">
-						<ul class="list-group menu">
-							<li class="list-group-item active"><a href="">Noticias</a></li>
-							<li class="list-group-item"><a href="">Eventos</a></li>
-							<li class="list-group-item"><a href="">Fiestas y Celebraciones</a></li>
-						</ul>
+					<div class="col-lg-4">						
+						<div class="navbar navbar-toggleable-md navbar-light bg-faded menu">
+							<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo022" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+
+							<div class="collapse navbar-collapse" id="navbarTogglerDemo022">
+								<ul class="list-group menu navbar-nav mr-auto">
+									<li class="list-group-item active"><a href="">Noticias</a></li>
+									<li class="list-group-item"><a href="">Eventos</a></li>
+									<li class="list-group-item"><a href="">Fiestas y Celebraciones</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 
-					<div class="col-md-8">
+					<div class="col-lg-8">
 						<h3 class="mt-0">Título de una noticia del desarrollo del sitio web de la Zona Norte del Cauca</h3>
 						<span class="municipio">Santander de Quilichao</span>
 						<span class="fecha">16 de mayo de 2017</span>
@@ -168,13 +176,13 @@
 						<div class="redes-int">
 							<span>Comparte este contenido en: </span>
 							<ul>
-								<li>
+								<li class="facebook">
 									<a href="https://www.facebook.com" target="black" title="Facebook"><img src="img/facebook.svg" alt="Logo Facebook"></a>
 								</li>
-								<li>
+								<li class="twitter">
 									<a href="https://twitter.com" target="black" title="Twitter"><img src="img/twitter.svg" alt="Logo Twitter"></a>
 								</li>
-								<li>
+								<li class="google">
 									<a href="https://plus.google.com" target="black" title="Google+"><img src="img/google.svg" alt="Logo Google+"></a>
 								</li>
 							</ul>
@@ -191,7 +199,7 @@
 			<h3 class="mx-2 mb-4">Síguenos en:</h3>
 			<ul class="m-0">
 				<li>
-					<a href="https://www.facebook.com" target="black"><img src="img/facebook.svg" alt="Logo Facebook">Facebook</a>
+					<a href="https://www.facebook.com/" target="black"><img src="img/facebook.svg" alt="Logo Facebook">Facebook</a>
 				</li>
 				<li>
 					<a href="https://twitter.com" target="black"><img src="img/twitter.svg" alt="Logo Twitter">Twitter</a>
@@ -206,7 +214,7 @@
 		</div>    
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2 px-0 pr-4 first">
+				<div class="col-lg-2 col-sm-3 px-0 pr-4 first"> <!--cambio de clase-->
 					<h3>Corporación Mixta de Turísmo del Cauca</h3>
 					<ul>
 						<li>Dirección: Cale 5 N° 4-33</li>
@@ -216,7 +224,7 @@
 					<span>Todos los derechos reservados</span>
 					<span class="borde"></span>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Operador turístico</h3>
 					<ul>
 						<li class="mb-2"><a href="">Quiénes somos</a></li>
@@ -224,7 +232,7 @@
 						<li class="mb-2"><a href="">Plan de acción</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Nuestros Municipios</h3>
 					<ul>
 						<li class="mb-2"><a href="">Santander de Quilichao</a></li>
@@ -242,7 +250,7 @@
 						<li class="mb-2"><a href="">Toribío</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>¿A dónde ir?</h3>
 					<ul>
 						<li class="mb-2"><a href="">Rutas turísticas</a></li>
@@ -250,14 +258,14 @@
 						<li class="mb-2"><a href="">Mapa turístico</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Oferta turística</h3>
 					<ul>
 						<li class="mb-2"><a href="">Servicios</a></li>
 						<li class="mb-2"><a href="">Productos</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Actualidad</h3>
 					<ul>
 						<li class="mb-2"><a href="">Noticias</a></li>
@@ -265,7 +273,7 @@
 						<li class="mb-2"><a href="">Fiestas y Celebraciones</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Blog</h3>
 					<ul>
 						<li class="mb-2"><a href="">Cultura</a></li>
@@ -285,6 +293,8 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="lib/tether.min.js"></script>
 	<script src="lib/bootstrap.min.js"></script>
+	<script src="lib/transit/transit.js"></script>
+	<script src="lib/smoothscroll/smoothscroll.js"></script>
 	<script src="js/nortecauca.js"></script>
 	</body>
 </html>

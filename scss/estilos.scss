@@ -26,6 +26,8 @@ header {
 	}
 	.navbar-brand img.scroll {
 		display: none;
+		width: 150px;
+		max-width: 150px;
 	}
 	.navbar {
 		padding-top: 43px;
@@ -163,7 +165,7 @@ header {
 			span {
 				display: inline-block;
 				height: 3px;
-				width: 124px;
+				width: 23%;
 				background-color: #fff;
 			}
 			a.btn {
@@ -320,10 +322,9 @@ footer {
 		font-size: 0.94rem;
 		color: rgba(255, 255, 255, 1);
 	}
-	.col-md-2 {
+	.col-lg-2 {
 		position: relative;
 		padding-top: 55px; 
-		max-width: 14%;
 		span.borde {
 			position: absolute;
 			top: 48px;
@@ -333,9 +334,6 @@ footer {
 			display: block;
 			background-color: rgba(64, 156, 255, 1);
 		}
-	}
-	.col-md-2.first {
-		max-width: 16%;
 	}
 	h3 {
 		font-size: 0.94rem;
@@ -355,13 +353,10 @@ footer {
 		}
 	}
 	> img {
-		position: absolute;
-		display: inline-block;
-		width: 30%;
+		display: block;
+		width: 50%;
 		max-width: 270px !important;
-		bottom: 0;
-		left: 50%;
-		margin-left: -10%;
+		margin: 0 auto;
 	}
 }
 
@@ -434,19 +429,18 @@ footer {
 		max-width: 100%;
 	}
 }
-#eventos {
-	max-width: 351px;
-}
+
 .carruseles .carousel-item {
 	color: #fff;
 	border-radius: 10px;
 	border-radius: 4px !important;
 	overflow: hidden;
 	height: 375px;
-	max-carwidth: 100%;
+	max-width: 100%;
+	overflow: hidden;
 	img {
 		height: 375px;
-		width: 100%;
+		width: auto;
 		border-radius: 4px !important;
 	}
 	h4 {
@@ -495,7 +489,7 @@ footer {
 		left: 0;
 		width: 100%;
 		z-index: 20;
-		text-align: center;
+		text-align: left;
 		h3 {
 			position: relative;
 			padding: 0;
@@ -503,19 +497,19 @@ footer {
 			max-width: 198px;
 			bottom: auto;
 			text-align: left;
-			vertical-align: bottom;
-			margin-bottom: -8px;
+			vertical-align: middle;
 		}
 		.fecha {
 			font-family: 'robotobold';
 			width: 80px;
-			margin-right: 22px;
+			margin: 0 22px 0 35px;
 			font-size: 3.15rem;
 			color: rgba(68, 68, 68, 1);
 			background-color: rgba(255, 255, 255, 1);
 			border-radius: 4px;
 			box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
 			text-align: center;
+			vertical-align: middle;
 			span {
 				display: block;
 				font-family: 'robotomedium';
@@ -536,10 +530,10 @@ footer {
 
 .nuestros-mun {
 	background-image: url("../img/nuestrosmuni.jpg");
-	background-size: 100%;	
+	background-size: 100% 100vh;
 	.degradado {
 		background: linear-gradient(-180deg, rgba(41, 58, 125, 0.45) 0%, rgba(31, 45, 103, 1) 100%);
-		padding-bottom: 66px;
+		padding-bottom: 46px;
 	}
 	.container {
 		h2 {
@@ -548,11 +542,13 @@ footer {
 			font-size: 3.1rem;
 			margin: 5rem 0 4.6rem;
 		}
-		.col-md-6 {
+		.col-lg-6 {
+			margin-bottom: 20px;
 			> div {
 				border-radius: 4px;
 				box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
 				background-color: rgba(86, 162, 50, 1);
+				overflow: hidden;
 			}
 			h3 {
 				font-size: 1.73rem;
@@ -571,11 +567,13 @@ footer {
 			img {
 				border-top-right-radius: 4px;
 				border-bottom-right-radius: 4px;
-				height: 300px;
+				height: 305px;
+				width: 100%;
 			}
 			a {
 				position: absolute;
 				right: 23px;
+				bottom: 20px;
 				font-family: 'robotoregular';
 				color: rgba(244, 209, 1, 1);
 				font-size: 1rem;
@@ -608,17 +606,21 @@ footer {
 			color: rgba(143, 151, 162, 1);
 			margin: 5rem 0 4.6rem;
 		}
-		.col-md-3 {
+		.text-center {
 			margin-bottom: 30px;
 			img {
 				border-top-right-radius: 4px;
 				border-top-left-radius: 4px;
 			}
-			div {
+			div.d-inline-block {
 				background-color: #ffffff;
 				border-radius: 4px;
 				box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
 				padding-bottom: 20px;
+				overflow: hidden;
+			}
+			img {
+				height: 175px;
 			}
 			h3 {
 				font-size: 1.29rem;
@@ -662,6 +664,7 @@ footer {
 		}
 		img {
 			width: 100%;
+			height: 100%;
 		}
 		.informacion {
 			text-align: center;
@@ -672,7 +675,7 @@ footer {
 				max-width: 430px;
 				height: 100%;
 				border: 1px solid #CD5D6B;
-				padding: 0 21px;
+				padding: 21px;
 				display: -ms-flex;
 				display: -webkit-flex;
 				display: flex;
@@ -685,14 +688,19 @@ footer {
 				}
 			}
 			h2 {
+				position: relative;
+				display: inline-block;
+				width: auto;
 				font-size: 2.86rem;
 				color: rgba(244, 209, 1, 1);
 				span {
-					display: inline-block;
+					display: -moz-inline-grid;				
+					vertical-align: middle;
+				}
+				span.linea {
+					background-color:rgba(244, 209, 1, 1);
 					height: 1px;
 					width: 36px;
-					background-color:rgba(244, 209, 1, 1);
-					vertical-align: middle;
 					margin: 0 10px;
 				}
 			}
@@ -726,10 +734,13 @@ footer {
 /* Estilos pagimas internas */
 
 .interna {
-	padding-top: 163px;
+	padding-top: 138px;
 	background-color: #F9FAFB;
 	header .navbar {
-		border-bottom: 5px solid #3886dc;
+		border-bottom: 3px solid #3886dc;
+		.navbar-brand img {
+			max-width: 150px;
+		}
 	}
 	section {
 		padding-bottom: 50px;
@@ -857,8 +868,8 @@ footer {
 	}
 }
 
-/* Estilos a donde ir */
-.donde-ir {
+/* Estilos a segundo nivel */
+.segundo-nivel {
 	.contenido {
 		h3, p, h4 {
 			width: 100%;
@@ -959,17 +970,18 @@ footer {
 	}
 }
 
-.lista {
+.contenido .lista {
 	width: 100%;
 	max-width: 1014px;
 	margin: 5.57rem auto 0;
 	div {
 		margin-bottom: 75px;
 	}
-	h3{
+	h3 {
 		font-size: 1.08rem;
 		line-height: 1.72rem;
 		margin: 1.36rem 0 0.53rem;
+		text-align: left;
 		a {
 			color: rgba(68, 68, 68, 1);
 			text-decoration: none;
@@ -1048,6 +1060,10 @@ footer {
 	.cont-img {
 		position: relative;
 		margin-bottom: 4.57rem;
+		img {
+			display: block;
+			width: 100%;
+		}
 		div {
 			position: absolute;
 			bottom: 39px;
@@ -1154,12 +1170,16 @@ footer {
 		max-width: 1050px;
 		margin: 5.14rem auto 0;
 		.menu {
+			background-color: #fff;
+		}
+		ul.menu {
 			display: block;
 			width: 100%;
 			max-width: 291px;
 			border-radius: 4px;
 			box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
 			margin-top: 0.71rem;
+			background-color: #fff;
 			li {
 				padding: 0;
 				margin-bottom: 1px;
@@ -1238,7 +1258,7 @@ footer {
 	}
 }
 
-.col-md-8 > ul {
+.col-md-8 > ul, .col-lg-8 > ul {
 	margin-bottom: 21px;
 	li {
 		position: relative;
@@ -1256,14 +1276,14 @@ footer {
 	}
 }
 
-.col-md-8 .descarga {
+.col-md-8 .descarga, .col-lg-8 .descarga  {
 	margin: 3.07rem 0 3rem;
 	li {
 		position: relative;
 		border-radius: 3px;
 		border: none;
 		box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
-		padding: 1.18rem 1.93rem 1.18rem 1.93rem;
+		padding: 1.18rem 8.93rem 1.18rem 1.93rem;
 		margin-bottom: 8px;
 		a {
 			text-align: center;
@@ -1290,7 +1310,7 @@ footer {
 	}
 }
 
-.col-md-8 .destacados {
+.col-md-8 .destacados, .col-lg-8 .destacados {
 	margin-bottom: 60px;
 	li {
 		padding: 0;
@@ -1358,6 +1378,7 @@ footer {
 /* Estilos Municipio */
 .municipio {
 	.row {
+
 		width: 100%;
 		max-width: 950px;
 		margin: 8.28rem auto 0;		
@@ -1369,6 +1390,9 @@ footer {
 			float: left;
 			max-width: 261px;
 			margin: 8px 26px 18px 0;
+		}
+		.col-md-4.push-md-8 {
+			position: relative;
 		}
 		.sub-menu {
 			margin-top: 5px;
@@ -1459,16 +1483,98 @@ footer {
 		}
 	}
 }
-
-
-
-@media (max-width: 780px) {
-	.carruseles .carousel-item {
-		overflow: hidden;
-		height: 300px;
-		img {
-			height: 300px;
-			width: auto;
-		}		
+ /*Estilos formulario de contacto*/
+.contacto {
+	h3, p {
+		width: 100%;
+		max-width: 753px;
+		margin: 0 auto;
+	}
+	h3 {
+		margin: 5.07rem auto 1rem;
+	}
+	form {
+		max-width: 585px;
+		margin: 4.79rem auto 6.29rem;
+		label {
+			margin-bottom: .29rem;
+		}
+		.form-control {
+			height: 50px;
+			border: 2px solid rgba(202, 212, 214, 1);
+			border-radius: 3px;
+			font-family: 'robotoregular';
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;/* Firefox */
+			-webkit-box-sizing: border-box; /* Safari */ 
+		}
+		.form-control-danger {
+			border-color: rgba(254, 116, 133, 1);
+		}
+		textarea.form-control {
+			resize: none;
+			height: 122px;
+		}
+		> span {
+			display: inline-block;
+			float: right;
+			font-size: 0.86rem;
+		}
+		.btn-primary {
+			cursor: pointer;
+			height: 50px;
+			width: 120px;
+			background-color: #db7a11;;
+			border-color: #db7a11;;
+			border-radius: 4px;
+			font-family: 'roboto_slabbold';
+			font-size: 1.07rem;
+		}
+		.btn-primary:hover {
+			background-color: #9c570d;
+			border-color: #9c570d;;
+		}
+		.form-group {
+			position: relative;
+			.error {
+				position: absolute;
+				bottom: 0;
+				right: -257px;
+				display: inline-block;
+				background: url('../img/ico_informacion.png') no-repeat left center;
+				background-size: 24px 24px;
+				padding-left: 36px;
+				span {
+					position: relative;
+					display: inline-block;
+					float: none;
+					min-height: 56px;
+					background-color: rgba(254, 116, 133, 1);
+					border: 1px solid rgba(203, 92, 106, 1);
+					border-radius: 3px;
+					color: #fff;
+					line-height: 1.5rem;
+					padding: 16px 24px;
+				}
+				span::before {
+					position: absolute;
+					display: inline-block;
+					top: 50%;
+					left: -6px;
+					content: ' ';
+					width: 10px;
+					height: 10px;
+					margin-top: -6px;
+					background-color: rgba(254, 116, 133, 1);
+					border-left: 1px solid rgba(203, 92, 106, 1);
+					border-top: 1px solid rgba(203, 92, 106, 1);
+					-webkit-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+			}
+		}
 	}
 }
+
+@import "responsive.scss";

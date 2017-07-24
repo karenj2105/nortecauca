@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+a<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="utf-8">
@@ -14,6 +14,7 @@
 	<link href="css/fonts.css" rel="stylesheet">
 	<!-- Carga estilos persanalizados -->
 	<link href="lib/colorbox/colorbox.css" rel="stylesheet">
+	<link href="lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
 	<link href="css/estilos.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,7 +31,7 @@
 					<h5 class="">Bienvenido al sitio web de la Zona Norte del Cauca</h5>
 					<div class="d-inline-block">
 						<span>Hola, <b>Eliana Muñoz</b></span>
-						<div class="d-inline-block carrito"><span class="ico-carrito"></span><span class="punto"></span></div>
+						<a class="d-inline-block carrito" href="#"><span class="ico-carrito"></span><span class="punto"></span></a>
 					</div>
 				</div>
 			</div>
@@ -135,23 +136,33 @@
 						<h4>Galería fotográfica</h4>
 
 						<div class=" row galeria">
-							<div class="col-md-4">
+							<div class="col-md-6 col-lg-4 col-sm-6">
 								<a href="img/salvajina.jpg" class="exampleModal"><img src="img/salvajina.jpg" class="img-fluid"></a>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-6 col-lg-4 col-sm-6">
 								<a href="img/cabezote_01.jpg" class="exampleModal"><img src="img/cabezote_01.jpg" class="img-fluid"></a>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-6 col-lg-4 col-sm-6">
 								<a href="img/foto_01.jpg" class="exampleModal"><img src="img/foto_01.jpg" class="img-fluid"></a>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-6 col-lg-4 col-sm-6">
 								<a href="img/cabezote_02.jpg" class="exampleModal"><img src="img/cabezote_02.jpg" class="img-fluid"></a>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-6 col-lg-4 col-sm-6">
 								<a href="img/foto_09.jpg" class="exampleModal"><img src="img/foto_09.jpg" class="img-fluid"></a>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-6 col-lg-4 col-sm-6">
 								<a href="img/foto_08.jpg" class="exampleModal"><img src="img/foto_08.jpg" class="img-fluid"></a>
+							</div>
+							<div class="col-md-6 col-lg-4 col-sm-6">
+								<a href="img/foto_09.jpg" data-fancybox="group" data-type="image" data-caption="hola">
+									<img src="img/foto_09.jpg" alt="" class="img-fluid" />
+								</a>
+							</div>
+							<div class="col-md-6 col-lg-4 col-sm-6">
+								<a href="img/foto_01.jpg" data-fancybox="group" data-type="image" data-caption="hola">
+									<img src="img/foto_01.jpg" alt=""  class="img-fluid"/>
+								</a>
 							</div>
 						</div>
 
@@ -184,7 +195,7 @@
 
 						<ul class="list-group descarga">
 							<li class="list-group-item">Nombre del archivo<a href=""><span class="ico-descarga"></span></a></li>
-							<li class="list-group-item">Nombre del archivo<a href=""><span class="ico-descarga"></span></a></li>
+							<li class="list-group-item">Nombre del archivo Nombre del archivo<a href=""><span class="ico-descarga"></span></a></li>
 						</ul>
 
 						<ul class="list-group destacados">
@@ -207,17 +218,17 @@
 				<div class="redes-int">
 					<span>Comparte este contenido en: </span>
 					<ul>
-						<li>
+						<li class="facebook">
 							<a href="https://www.facebook.com" target="black" title="Facebook"><img src="img/facebook.svg" alt="Logo Facebook"></a>
 						</li>
-						<li>
+						<li class="twitter">
 							<a href="https://twitter.com" target="black" title="Twitter"><img src="img/twitter.svg" alt="Logo Twitter"></a>
 						</li>
-						<li>
+						<li class="google">
 							<a href="https://plus.google.com" target="black" title="Google+"><img src="img/google.svg" alt="Logo Google+"></a>
 						</li>
 					</ul>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</section>
@@ -227,7 +238,7 @@
 			<h3 class="mx-2 mb-4">Síguenos en:</h3>
 			<ul class="m-0">
 				<li>
-					<a href="https://www.facebook.com" target="black"><img src="img/facebook.svg" alt="Logo Facebook">Facebook</a>
+					<a href="https://www.facebook.com/" target="black"><img src="img/facebook.svg" alt="Logo Facebook">Facebook</a>
 				</li>
 				<li>
 					<a href="https://twitter.com" target="black"><img src="img/twitter.svg" alt="Logo Twitter">Twitter</a>
@@ -242,7 +253,7 @@
 		</div>    
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2 px-0 pr-4 first">
+				<div class="col-lg-2 col-sm-3 px-0 pr-4 first"> <!--cambio de clase-->
 					<h3>Corporación Mixta de Turísmo del Cauca</h3>
 					<ul>
 						<li>Dirección: Cale 5 N° 4-33</li>
@@ -252,7 +263,7 @@
 					<span>Todos los derechos reservados</span>
 					<span class="borde"></span>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Operador turístico</h3>
 					<ul>
 						<li class="mb-2"><a href="">Quiénes somos</a></li>
@@ -260,7 +271,7 @@
 						<li class="mb-2"><a href="">Plan de acción</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Nuestros Municipios</h3>
 					<ul>
 						<li class="mb-2"><a href="">Santander de Quilichao</a></li>
@@ -278,7 +289,7 @@
 						<li class="mb-2"><a href="">Toribío</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>¿A dónde ir?</h3>
 					<ul>
 						<li class="mb-2"><a href="">Rutas turísticas</a></li>
@@ -286,14 +297,14 @@
 						<li class="mb-2"><a href="">Mapa turístico</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Oferta turística</h3>
 					<ul>
 						<li class="mb-2"><a href="">Servicios</a></li>
 						<li class="mb-2"><a href="">Productos</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Actualidad</h3>
 					<ul>
 						<li class="mb-2"><a href="">Noticias</a></li>
@@ -301,7 +312,7 @@
 						<li class="mb-2"><a href="">Fiestas y Celebraciones</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Blog</h3>
 					<ul>
 						<li class="mb-2"><a href="">Cultura</a></li>
@@ -322,6 +333,17 @@
 	<script src="lib/tether.min.js"></script>
 	<script src="lib/bootstrap.min.js"></script>
 	<script src="lib/colorbox/colorbox-min.js"></script>
+	<script src="lib/fancybox/jquery.fancybox.min.js"></script>
 	<script src="js/nortecauca.js"></script>
+
+	<script type="text/javascript">
+		/*$("[data-fancybox]").fancybox({
+			// Options will go here
+		});*/
+		$().fancybox({
+			selector : '[data-fancybox="images"]',
+			loop     : true
+		});
+	</script>
 	</body>
 </html>

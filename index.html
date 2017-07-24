@@ -22,14 +22,14 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body>
 	<header>
 		<div class="navbar navbar-toggleable-md navbar-inverse fixed-top" data-spy="affix" data-offset-top="197">	<div class="info">
 				<div class="container">
 					<h5 class="">Bienvenido al sitio web de la Zona Norte del Cauca</h5>
 					<div class="d-inline-block">
 						<span>Hola, <b>Eliana Muñoz</b></span>
-						<div class="d-inline-block carrito"><span class="ico-carrito"></span><span class="punto"></span></div>
+						<a class="d-inline-block carrito" href="#"><span class="ico-carrito"></span><span class="punto"></span></a>
 					</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@
 	<section class="carruseles">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-lg-8 col-md-7">
 					<h2 class="d-inline-block mr-auto">Noticias</h2>
 					<a href="">Ver todas la noticias<span class="ico-flecha"></span></a>
 
@@ -159,7 +159,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-4 col-md-5">
 					<h2 class="d-inline-block mr-auto">Eventos</h2>
 					<a href="">Ver todos los eventos<span class="ico-flecha"></span></a>
 					<div id="eventos" class="carousel slide d-inline-block" data-ride="carousel">
@@ -182,7 +182,7 @@
 								<h4>Miranda<span></span></h4>
 								<div class="info">
 									<div class="fecha d-inline-block"><span>Jun</span>25</div>
-									<h3 class="d-inline-block">1ra Feria de la paz, la reconciliación y la alegria</h3>
+									<h3 class="d-inline-block">niños</h3>
 								</div>
 								<div class="sombra carousel-caption"></div>
 							</div>
@@ -199,33 +199,33 @@
 				<h2 class="text-center d-inline-block">&bull; Nuestros municipios tienen para ti &bull;</h2>
 				<div class="row">
 
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<div class="d-inline-block">
-							<div class="row"> <!--Se agrega este div-->
-								<div class="col-md-6 push-md-6"><!--Se agrega clase-->
+							<div class="row">
+								<div class="col-sm-6  push-sm-6">
 									<img class="img-fluid" src="img/foto_03.jpg" alt="img naturaleza">
 								</div>
-								<div class="informacion col-md-6 pull-md-6"><!--Se agrega clase-->
+								<div class="informacion col-sm-6  pull-sm-6">
 									<h3 class="mb-3">Naturaleza</h3>
 									<p>
 										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
 									</p>
 									<a href="">Ver más<span class="ico-flecha"></span></a>
-								</div><!--Se elimina div con clase clear-->
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-md-6 d-inline-block">
+					<div class="col-lg-6 d-inline-block">
 						<div class="d-inline-block">
 							<div class="row"><!--Se agrega este div-->
-								<div class="col-md-6 push-md-6"><!--Se agrega clase-->
+								<div class="col-sm-6 push-sm-6"><!--Se agrega clase-->
 									<img class="img-fluid" src="img/foto_04.jpg" alt="img gastronomia">
 								</div>
-								<div class="informacion col-md-6 pull-md-6"><!--Se agrega clase-->
+								<div class="informacion col-sm-6 pull-sm-6"><!--Se agrega clase-->
 									<h3 class="mb-3">Gastronomía</h3>
 									<p>
-										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
 									</p>
 									<a href="">Ver más<span class="ico-flecha"></span></a>
 								</div><!--Se elimica div con clase clear-->
@@ -242,7 +242,7 @@
 		<div class="container">
 			<h2 class="text-center d-inline-block">&bull; Esto te puede interesar &bull;</h2>
 			<div class="row">
-				<div class="col-md-3 text-center">
+				<div class="col-lg-3 col-md-6 col-sm-6 text-center">
 					<div class="d-inline-block">
 						<img class="img-fluid" src="img/foto_05.jpg" alt="img dulce">
 						<h3>Dulce de guayaba</h3>
@@ -250,7 +250,7 @@
 						<a href="" class="btn btn-primary">¿Te interesa?</a>
 					</div>
 				</div>
-				<div class="col-md-3 text-center">
+				<div class="col-lg-3 col-md-6 col-sm-6 text-center">
 					<div class="d-inline-block">
 						<img class="img-fluid" src="img/foto_06.jpg" alt="img artesanía">
 						<h3>Artesanía en Caña</h3>
@@ -258,7 +258,7 @@
 						<a href="" class="btn btn-primary">¿Te interesa?</a>
 					</div>
 				</div>
-				<div class="col-md-3 text-center">
+				<div class="col-lg-3 col-md-6 col-sm-6 text-center">
 					<div class="d-inline-block">
 						<img class="img-fluid" src="img/foto_07.jpg" alt="img hotel">
 						<h3>Hotel El Refugio</h3>
@@ -266,7 +266,7 @@
 						<a href="" class="btn btn-primary">¿Te interesa?</a>
 					</div>
 				</div>
-				<div class="col-md-3 text-center">
+				<div class="col-lg-3 col-md-6 col-sm-6 text-center">
 					<div class="d-inline-block">
 						<img class="img-fluid" src="img/foto_08.jpg" alt="img restaurante">
 						<h3>Restaurante Estalerinho</h3>
@@ -287,7 +287,7 @@
 				<div class="col-md-5 informacion">
 					<div class="flex-parent">
 						<div class="flex-child">
-							<h2 class="mt-auto"><span></span>Caloto<span></span></h2>
+							<h2 class="mt-auto"><span class="linea"></span><span>Santander de Quilichao</span><span class="linea"></span></h2>
 							<h3>Nuestro municipio del mes</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, architecto beatae vitae dicta sunt explicab.
@@ -320,7 +320,7 @@
 		</div>    
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2 px-0 pr-4 first">
+				<div class="col-lg-2 col-sm-3 px-0 pr-4 first"> <!--cambio de clase-->
 					<h3>Corporación Mixta de Turísmo del Cauca</h3>
 					<ul>
 						<li>Dirección: Cale 5 N° 4-33</li>
@@ -330,7 +330,7 @@
 					<span>Todos los derechos reservados</span>
 					<span class="borde"></span>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Operador turístico</h3>
 					<ul>
 						<li class="mb-2"><a href="">Quiénes somos</a></li>
@@ -338,7 +338,7 @@
 						<li class="mb-2"><a href="">Plan de acción</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Nuestros Municipios</h3>
 					<ul>
 						<li class="mb-2"><a href="">Santander de Quilichao</a></li>
@@ -356,7 +356,7 @@
 						<li class="mb-2"><a href="">Toribío</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>¿A dónde ir?</h3>
 					<ul>
 						<li class="mb-2"><a href="">Rutas turísticas</a></li>
@@ -364,14 +364,14 @@
 						<li class="mb-2"><a href="">Mapa turístico</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Oferta turística</h3>
 					<ul>
 						<li class="mb-2"><a href="">Servicios</a></li>
 						<li class="mb-2"><a href="">Productos</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Actualidad</h3>
 					<ul>
 						<li class="mb-2"><a href="">Noticias</a></li>
@@ -379,7 +379,7 @@
 						<li class="mb-2"><a href="">Fiestas y Celebraciones</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2 px-0 pl-4">
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
 					<h3>Blog</h3>
 					<ul>
 						<li class="mb-2"><a href="">Cultura</a></li>
