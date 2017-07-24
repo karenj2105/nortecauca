@@ -1,0 +1,279 @@
+@media (min-width: 1200px) {
+	footer {
+		.col-lg-2 {
+			max-width: 14%;
+		}
+		.col-lg-2.first {
+			max-width: 16%;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.contacto form {
+		.form-group .error {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			margin-top: 6px;
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	footer {
+		.col-lg-2 {
+			max-width: 14%;
+		}
+		.col-lg-2.first {
+			max-width: 16%;
+		}
+	}
+	#carrusel-principal {
+		.carousel-caption.d-md-block {
+			bottom: 10px;
+		}
+		.carousel-caption {
+			div {
+				span {
+					width: 19%;
+				}
+			}
+		}
+	}
+	.carruseles .carousel-item {
+		overflow: hidden;
+		height: 300px;
+		img {
+			height: 300px;
+			width: auto;
+		}
+		h4{
+			top: 10px;
+		}
+		.info {
+			text-align: center;
+			.fecha {
+				margin-left: 22px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 992px) {
+	.interna .contenido > { 
+			p, h3, h4 {
+			padding: 0 20px;
+		}
+	}
+	.contenido .borde {
+		width: 95%;
+		max-width: 95%;
+	}
+	.contenido .lista h3 {
+		padding: 0;
+	}
+	.interna .municipio .contenido {
+		p, h3, h4 {
+			padding: 0;
+		}
+		.row {
+			margin-top: 4.28rem;
+			.float {
+				float: none;
+				margin-right: 0;
+				max-width: 100%; 
+			}
+		}
+		.informacion {
+			margin-top: 0;
+			.col-md-12{
+				h3 {
+					margin-top: 3.07rem;
+				}
+				h3, p {
+					max-width: 100%;
+				}
+			}
+			.marco {
+				position: relative;
+				top: auto;
+				right: auto;
+				margin: 25px auto;
+				width: 100%;
+				max-width: 305px;
+			}
+		}		
+	}
+	.table td:first-child, .table th:first-child {
+		padding-left: 1.04rem;
+	}
+	.noticia .row {
+		margin-top: 2.15rem;
+		.navbar.menu {
+			padding: .71rem 0 0;
+			margin-bottom: 2.15rem;
+			min-height: 53px;
+			background: #f7f8f9;
+			border-radius: 4px;
+			box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+			button {
+				cursor: pointer;
+			}
+			ul.menu {
+				max-width: 100%;
+				margin-top: 47px;
+				box-shadow: none;
+				li:first-child {
+					a {
+						border-top-left-radius: 0;
+						border-top-right-radius: 0; 
+					}
+				}
+			}
+		}
+	}
+	.contacto h3 {
+		margin-top: 3.07rem;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.carruseles .carousel-item {
+		h4{
+			top: 10px;
+		}
+		.info {
+			text-align: center;
+			.fecha {
+				margin-left: 22px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.nuestros-mun .container .col-lg-6 a {
+		bottom: 30px;
+	}
+	.municipio-mes {
+		.container-responsive {
+			.row {
+				margin: 0;
+				> div {
+					background-color: #b8182b;
+					padding: 0;
+				}
+				.informacion {
+					padding: 20px;
+					.flex-parent {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.municipio .contenido .row .col-md-8 {
+		margin-top: 40px;
+	}
+	.noticia .row {
+		.float {
+			float: none;
+			max-width: 100%;
+			margin: 8px 0 18px;
+		}
+	}
+	.blog-articulo .cont-img {
+		margin-bottom: 3.57rem;
+		overflow: hidden;
+		height: 300px;
+		img {
+			width: auto !important;
+			height: 100%;
+		}
+		div {
+			bottom: 10px;
+			left: 20px;
+		}
+	}
+	.contacto form {
+		padding: 0 20px;
+	}
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+	#eventos {
+		max-width: 351px;
+	}
+	
+}
+
+
+@media (max-width: 575px) {
+	#eventos {
+		max-width: 310px;
+	}
+	.carruseles .carousel-item {
+		.info {
+			text-align: left;
+			.fecha {
+				margin-left: 15px;
+			}
+			h3 {
+				max-width: 180px;
+			}
+		}
+	}
+	.nuestros-mun .container .col-lg-6 {
+		.informacion {
+			padding: 26px 53px;
+		}
+		img {
+			height: 293px;
+		}
+		a {
+			right: 45px;
+			bottom: 20px;
+		}
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+	footer {
+		.col-lg-2 {
+			padding: 25px 1.5rem !important;
+			span.borde {
+				position: relative;
+				top: auto;
+				right: auto;
+				width: 50%;
+				height: 1px;
+				margin: 30px auto 0;
+			}
+		}
+		.col-lg-2.first {
+			padding: 40px 40px 10px !important;
+		}
+		.col-6:nth-of-type(2n+1) {
+			padding: 20px 15% 0 0.5rem !important;
+		}
+		.col-6:nth-of-type(2n) {
+			padding: 20px 0.5rem 0 15% !important;
+		}
+	}
+	.col-md-8 .descarga li {
+		padding-right: 6.2rem;
+		a {
+			width: 80px;
+		}
+	}
+	.contacto form > span {
+		float: none;
+		display: block;
+		margin-bottom: 1rem;
+	}
+}

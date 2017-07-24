@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Norte del Cauca</title>
+	
+	<link href="css/genericos.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- Carga de fuentes de fonts -->
+	<link href="css/fonts.css" rel="stylesheet">
+	<!-- Carga estilos persanalizados -->
+	<link href="css/estilos.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body class="interna">
+	<header>
+		<div class="navbar navbar-toggleable-md navbar-inverse fixed-top" data-spy="affix" data-offset-top="197">	<div class="info">
+				<div class="container">
+					<h5 class="">Bienvenido al sitio web de la Zona Norte del Cauca</h5>
+					<div class="d-inline-block">
+						<span>Hola, <b>Eliana Muñoz</b></span>
+						<a class="d-inline-block carrito" href="#"><span class="ico-carrito"></span><span class="punto"></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="img/marca_norte_home.svg" alt="Norte del Cauca" class="img-fluid">
+					<img src="img/marca_norte_scrolldown.svg" alt="Norte del Cauca" class="img-fluid scroll">
+				</a>
+
+				<nav class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav ml-auto mt-2 mt-md-0">
+						<li class="nav-item mx-3 active"><a class="nav-link px-0 pb-1" href="#">Inicio</a></li>
+						<li class="nav-item mx-3"><a class="nav-link px-0 pb-1" href="#">Operador turístico</a></li>
+						<li class="nav-item mx-3"><a class="nav-link px-0 pb-1" href="#">Nuestros Municipios</a></li>
+						<li class="nav-item mx-3"><a class="nav-link px-0 pb-1" href="#">¿A dónde ir?</a></li>
+						<li class="nav-item mx-3"><a class="nav-link px-0 pb-1" href="#">Oferta turística</a></li>
+						<li class="nav-item mx-3"><a class="nav-link px-0 pb-1" href="#">Actualidad</a></li>
+						<li class="nav-item mx-3"><a class="nav-link px-0 pb-1" href="#">Blog</a></li>
+						<li class="nav-item mx-3"><a class="nav-link px-0 pb-1" href="#">Contacto</a></li>
+					</ul>
+				</nav>
+				<a class="lupa" href="#buscador"><span class="ico-buscador"></span></a>
+			</div>
+		</div>
+	</header>
+
+	<div class="container miga">
+		<span class="d-inline-block">Usted está en:</span>
+		<ol class="breadcrumb d-inline-block p-0 m-0">
+			<li class="breadcrumb-item"><a href="#">Inicio</a></li>
+			<li class="breadcrumb-item active">¿A dónde ir?</li>
+		</ol>
+	</div>
+
+	<section class="contacto">
+		<div class="container">
+			<div class="contenido">
+				<h2>¿A dónde ir?</h2>
+				<h3>Comunícate con la Corporación Mixta de Turismo del Cauca</h3>
+				<p class="descripcion">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				
+				<form id="formContacto" action="#" method="post">
+					<div class="form-group">
+						<label for="nombre">Nombre*</label>
+						<input type="text" class="form-control" id="nombre" name="nombre">
+					</div>
+					<div class="form-group">
+						<label for="email">Correo electronico*</label>						
+						<input type="text" class="form-control form-control-danger" id="email" name="email">
+						<div class="error"><span>Este campo es obligatorio</span></div>
+					</div>
+					<div class="form-group">
+						<label for="asunto">Asunto</label>
+						<input type="text" class="form-control" id="asunto" name="asunto">
+					</div>
+					<div class="form-group">
+						<label for="mensaje">Mensaje*</label>
+						<textarea class="form-control" id="mensaje" name="mensaje"></textarea>
+					</div>
+					<span>Los campos marcados con (*) son obligatorios</span>
+					<button type="submit" class="btn btn-default btn-primary" id="enviarmMensaje" data-loading-text="Enviando..." autocomplete="off">Enviar</button>
+					<div class="msg"></div>
+				</form>
+
+				<div class="redes-int">
+					<span>Comparte este contenido en: </span>
+					<ul>
+						<li class="facebook">
+							<a href="https://www.facebook.com" target="black" title="Facebook"><img src="img/facebook.svg" alt="Logo Facebook"></a>
+						</li>
+						<li class="twitter">
+							<a href="https://twitter.com" target="black" title="Twitter"><img src="img/twitter.svg" alt="Logo Twitter"></a>
+						</li>
+						<li class="google">
+							<a href="https://plus.google.com" target="black" title="Google+"><img src="img/google.svg" alt="Logo Google+"></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="redes">
+			<h3 class="mx-2 mb-4">Síguenos en:</h3>
+			<ul class="m-0">
+				<li>
+					<a href="https://www.facebook.com/" target="black"><img src="img/facebook.svg" alt="Logo Facebook">Facebook</a>
+				</li>
+				<li>
+					<a href="https://twitter.com" target="black"><img src="img/twitter.svg" alt="Logo Twitter">Twitter</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com" target="black"><img src="img/instagram.svg" alt="Logo Instagram">Instagram</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com" target="black"><img src="img/youtube.svg" alt="Logo Youtube">Youtube</a>
+				</li>
+			</ul>
+		</div>    
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-sm-3 px-0 pr-4 first"> <!--cambio de clase-->
+					<h3>Corporación Mixta de Turísmo del Cauca</h3>
+					<ul>
+						<li>Dirección: Cale 5 N° 4-33</li>
+						<li>Teléfono: (+57 2) 8320154</li>
+						<li>Email: info@cautiva.travel</li>
+					</ul>
+					<span>Todos los derechos reservados</span>
+					<span class="borde"></span>
+				</div>
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
+					<h3>Operador turístico</h3>
+					<ul>
+						<li class="mb-2"><a href="">Quiénes somos</a></li>
+						<li class="mb-2"><a href="">Qué hacemos</a></li>
+						<li class="mb-2"><a href="">Plan de acción</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
+					<h3>Nuestros Municipios</h3>
+					<ul>
+						<li class="mb-2"><a href="">Santander de Quilichao</a></li>
+						<li class="mb-2"><a href="">Buenos Aires</a></li>
+						<li class="mb-2"><a href="">Suárez</a></li>
+						<li class="mb-2"><a href="">Caldono</a></li>
+						<li class="mb-2"><a href="">Padilla</a></li>
+						<li class="mb-2"><a href="">Puerto Tejada</a></li>
+						<li class="mb-2"><a href="">Guachené</a></li>
+						<li class="mb-2"><a href="">Villa Rica</a></li>
+						<li class="mb-2"><a href="">Caloto</a></li>
+						<li class="mb-2"><a href="">Corinto</a></li>
+						<li class="mb-2"><a href="">Miranda</a></li>
+						<li class="mb-2"><a href="">Jambaló</a></li>
+						<li class="mb-2"><a href="">Toribío</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
+					<h3>¿A dónde ir?</h3>
+					<ul>
+						<li class="mb-2"><a href="">Rutas turísticas</a></li>
+						<li class="mb-2"><a href="">Destinos turísticos</a></li>
+						<li class="mb-2"><a href="">Mapa turístico</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
+					<h3>Oferta turística</h3>
+					<ul>
+						<li class="mb-2"><a href="">Servicios</a></li>
+						<li class="mb-2"><a href="">Productos</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
+					<h3>Actualidad</h3>
+					<ul>
+						<li class="mb-2"><a href="">Noticias</a></li>
+						<li class="mb-2"><a href="">Eventos</a></li>
+						<li class="mb-2"><a href="">Fiestas y Celebraciones</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-sm-3 col-6 px-0 pl-4"> <!--cambio de clase-->
+					<h3>Blog</h3>
+					<ul>
+						<li class="mb-2"><a href="">Cultura</a></li>
+						<li class="mb-2"><a href="">Turismo</a></li>
+						<li class="mb-2"><a href="">Deporte</a></li>
+						<li class="mb-2"><a href="">Naturaleza</a></li>
+						<li class="mb-2"><a href="">La Corporación</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<img class="img-fluid" src="img/marca_footer.svg" alt="Logo footer">
+	</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="lib/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="lib/tether.min.js"></script>
+	<script src="lib/bootstrap/bootstrap.js"></script>
+	<script src="lib/transit/transit.js"></script>
+	<script src="js/nortecauca.js"></script>
+	</body>
+</html>
