@@ -13,6 +13,7 @@
 	<!-- Carga de fuentes de fonts -->
 	<link href="css/fonts.css" rel="stylesheet">
 	<!-- Carga estilos persanalizados -->
+	<link href="lib/fancybox/fancybox.css" rel="stylesheet">
 	<link href="css/estilos.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -71,78 +72,83 @@
 		<div class="container">
 			<div class="contenido">
 				<h2>Blog</h2>
-				<h3>Encuentra artículos de:</h3>
-				<ul class="list-departamentos">
-					<li><a class="btn btn-primary" href="">Guachené</a></li>
-					<li><a class="btn btn-primary" href="">Suárez</a></li>
-					<li><a class="btn btn-primary" href="">Corinto</a></li>
-					<li><a class="btn btn-primary" href="">Padilla</a></li>
-					<li><a class="btn btn-primary" href="">Villa Rica</a></li>
-					<li><a class="btn btn-primary" href="">Buenos Aires</a></li>
-					<li><a class="btn btn-primary" href="">Caldono</a></li>
-					<li><a class="btn btn-primary" href="">Miranda</a></li>
-					<li><a class="btn btn-primary" href="">Toribío</a></li>
-					<li><a class="btn btn-primary" href="">Santander de Chilichao</a></li>
-					<li><a class="btn btn-primary" href="">Puerto Tejada</a></li>
-					<li><a class="btn btn-primary" href="">Caloto</a></li>
-					<li><a class="btn btn-primary" href="">Jambaló</a></li>
-				</ul>
-				<div class="borde"><span></span><span class="punto"></span></div>
-				
-				<div class="row lista">
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Santander de Quilichao</h4>
-						<span class="fecha">20 de mayo de 2017</span>
+				<div class="row">
+					<div class="col-md-12 enlaces">
+						<h3>Encuentra artículos de:</h3>
+						<ul class="list-municipios">
+							<li><a class="btn btn-primary" data-group="all" href="">Todos</a></li>
+							<li><a class="btn btn-primary" data-group="guachene" href="">Guachené</a></li>
+							<li><a class="btn btn-primary" data-group="suarez" href="">Suárez</a></li>
+							<li><a class="btn btn-primary" data-group="corinto" href="">Corinto</a></li>
+							<li><a class="btn btn-primary" data-group="padilla" href="">Padilla</a></li>
+							<li><a class="btn btn-primary" data-group="villa" href="">Villa Rica</a></li>
+							<li><a class="btn btn-primary" data-group="buenosaires" href="">Buenos Aires</a></li>
+							<li><a class="btn btn-primary" data-group="caldono" href="">Caldono</a></li>
+							<li><a class="btn btn-primary" data-group="miranda" href="">Miranda</a></li>
+							<li><a class="btn btn-primary" data-group="toribio" href="">Toribío</a></li>
+							<li><a class="btn btn-primary" data-group="santander" href="">Santander de Chilichao</a></li>
+							<li><a class="btn btn-primary" data-group="puertotejada" href="">Puerto Tejada</a></li>
+							<li><a class="btn btn-primary" data-group="caloto" href="">Caloto</a></li>
+							<li><a class="btn btn-primary" data-group="jambalos" href="">Jambaló</a></li>
+						</ul>
+						<div class="borde"><span></span><span class="punto"></span></div>
 					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img2.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Puerto Tejada</h4>
-						<span class="fecha">16 de mayo de 2017</span>
-					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img3.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Corinto</h4>
-						<span class="fecha">14 de mayo de 2017</span>
-					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Santander de Quilichao</h4>
-						<span class="fecha">20 de mayo de 2017</span>
-					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img2.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Puerto Tejada</h4>
-						<span class="fecha">16 de mayo de 2017</span>
-					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img3.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Corinto</h4>
-						<span class="fecha">14 de mayo de 2017</span>
-					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Santander de Quilichao</h4>
-						<span class="fecha">20 de mayo de 2017</span>
-					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img2.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Puerto Tejada</h4>
-						<span class="fecha">16 de mayo de 2017</span>
-					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clase-->
-						<img class="img-fluid" src="img/noticias/img3.jpg" alt="Imagen">
-						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
-						<h4>Corinto</h4>
-						<span class="fecha">14 de mayo de 2017</span>
+					<div class="col-md-12 lista" id="list-blog">
+						<div class="col-md-6 col-lg-4" data-groups='["santander"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Santander de Quilichao</h4>
+							<span class="fecha">20 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["puertotejada"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img2.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Puerto Tejada</h4>
+							<span class="fecha">16 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["corinto"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img3.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Corinto</h4>
+							<span class="fecha">14 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["santander"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Santander de Quilichao</h4>
+							<span class="fecha">20 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["puertotejada"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img2.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Puerto Tejada</h4>
+							<span class="fecha">16 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["corinto"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img3.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Corinto</h4>
+							<span class="fecha">14 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["santander"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Santander de Quilichao</h4>
+							<span class="fecha">20 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["puertotejada"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img2.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Puerto Tejada</h4>
+							<span class="fecha">16 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4" data-groups='["corinto"]'><!--Cambio de clase-->
+							<img class="img-fluid" src="img/noticias/img3.jpg" alt="Imagen">
+							<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
+							<h4>Corinto</h4>
+							<span class="fecha">14 de mayo de 2017</span>
+						</div>
+						<div class="col-md-6 col-lg-4 shuffle_sizer"></div>
 					</div>
 				</div>
 				<div class="borde"></div>
@@ -288,6 +294,10 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="lib/tether.min.js"></script>
 	<script src="lib/bootstrap.min.js"></script>
+	<script src="lib/fancybox/fancybox.js"></script>
+	<script src="lib/transit/transit.js"></script>
+	<script src="lib/shuffle.js"></script>
 	<script src="js/nortecauca.js"></script>
+	<script src="js/blog.js"></script>
 	</body>
 </html>

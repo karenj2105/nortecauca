@@ -51,6 +51,8 @@
 				$('header .info').css('height', '22px');
 				$('header .navbar a.lupa').removeClass('blanco');
 				$('header .info .carrito span.ico-carrito').css('border-left', '1px solid rgba(42, 59, 125, 1)');
+				$('header .navbar a.lupa .ico-buscador').addClass('addcolor');
+				$('header .navbar-inverse .navbar-toggler-icon').addClass('home');
 			} else {
 				$('header .navbar').css('background-color', "transparent");
 				$('header .navbar').css('padding', "43px 17.5px 17.5px");
@@ -66,17 +68,11 @@
 				$('a.lupa').css('display', 'none');
 				$('header .info').css('height', '37px');
 				$('header .info .carrito span.ico-carrito').css('border-left', '1px solid rgba(255, 255, 255, 0.2)');
+				$('header .navbar a.lupa .ico-buscador').removeClass('addcolor');
+				$('header .navbar-inverse .navbar-toggler-icon').removeClass('home');
 			}
 		});
 	}
-
-	var altDescarga = $('.row .descarga li').outerHeight();
-	$('.row .descarga li a').height(altDescarga);
-
-	/*$('.exampleModal').colorbox({
-		rel:'group1',
-		height: "90%"
-	});*/
 
 	hoverRedes("facebook");
 	hoverRedes("twitter");

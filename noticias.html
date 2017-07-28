@@ -13,6 +13,7 @@
 	<!-- Carga de fuentes de fonts -->
 	<link href="css/fonts.css" rel="stylesheet">
 	<!-- Carga estilos persanalizados -->
+	<link href="lib/fancybox/fancybox.css" rel="stylesheet">
 	<link href="css/estilos.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -79,7 +80,7 @@
 				<div class="borde"><span></span><span class="punto"></span></div>
 				
 				<div class="row lista">
-					<div class="col-md-6 col-lg-4"><!--Cambio de clases-->
+					<div class="col-md-6 col-lg-4 picture-item" data-groups='["Santander"]'><!--Cambio de clases-->
 						<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
 						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
 						<h4>Santander de Quilichao</h4>
@@ -97,7 +98,7 @@
 						<h4>Corinto</h4>
 						<span class="fecha">14 de mayo de 2017</span>
 					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clases-->
+					<div class="col-md-6 col-lg-4 picture-item" data-groups='["Santander"]'><!--Cambio de clases-->
 						<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
 						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
 						<h4>Santander de Quilichao</h4>
@@ -115,7 +116,7 @@
 						<h4>Corinto</h4>
 						<span class="fecha">14 de mayo de 2017</span>
 					</div>
-					<div class="col-md-6 col-lg-4"><!--Cambio de clases-->
+					<div class="col-md-6 col-lg-4 picture-item" data-groups='["Santander"]'><!--Cambio de clases-->
 						<img class="img-fluid" src="img/noticias/img1.jpg" alt="Imagen">
 						<h3><a href="">Lorem ipsum dolor si amet, consectetur adipiscing elit. Sed non efficitur est.</a></h3>
 						<h4>Santander de Quilichao</h4>
@@ -277,6 +278,19 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="lib/tether.min.js"></script>
 	<script src="lib/bootstrap.min.js"></script>
+	<script src="lib/fancybox/fancybox.js"></script>
+	<script src="lib/transit/transit.js"></script>
+	<script src="lib/shuffle.js"></script>
 	<script src="js/nortecauca.js"></script>
-	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			shuffleInstance.filter('Santander', {
+		  by: function (element) {
+		    return element.getAttribute('data-groups').toLowerCase();
+		  },
+		});
+
+		});
+	</script>
+</body>
 </html>

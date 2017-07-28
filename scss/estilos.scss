@@ -1,3 +1,11 @@
+
+@import "font-awesome.min.scss";
+@import "prettyPhoto.scss";
+@import "price-range.scss";
+@import "animate.scss";
+@import "main.scss";
+@import "responsivetienda.scss";
+
 html {
 	font-size: 14px;	
 }
@@ -529,11 +537,24 @@ footer {
 /* Estilos nuestros municipios */
 
 .nuestros-mun {
-	background-image: url("../img/nuestrosmuni.jpg");
-	background-size: 100% 100vh;
+	position: relative;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #1F2D67;
+	padding-bottom: 67px;
 	.degradado {
-		background: linear-gradient(-180deg, rgba(41, 58, 125, 0.45) 0%, rgba(31, 45, 103, 1) 100%);
-		padding-bottom: 46px;
+		position: absolute;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+		.sombra {
+			position: absolute;
+			display: block;
+			background: linear-gradient(-180deg, rgba(41, 58, 125, 0.45) 0%, rgba(31, 45, 103, 1) 100%);
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.container {
 		h2 {
@@ -694,15 +715,18 @@ footer {
 				font-size: 2.86rem;
 				color: rgba(244, 209, 1, 1);
 				span {
-					display: -moz-inline-grid;				
+					display: inline-block;
 					vertical-align: middle;
+					max-width: 240px;
 				}
 				span.linea {
 					background-color:rgba(244, 209, 1, 1);
 					height: 1px;
 					width: 36px;
-					margin: 0 10px;
+					max-width: 36px;
 				}
+				span:first-child { margin: 0 10px 0 0;}
+				span:last-child { margin: 0 0 0 10px;}
 			}
 			h3 {
 				font-size: 1.43rem;
@@ -816,7 +840,7 @@ footer {
 	border-radius: 4px;
 	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
 	color: rgba(68, 68, 68, 1);
-	h2 {
+	> h2 {
 		padding: 1.15rem 2.93rem 1.3rem;
 		background-color: rgba(86, 162, 50, 1);
 		font-size: 2.15rem;
@@ -946,7 +970,7 @@ footer {
 	h3 {
 		text-align: center;
 	}
-	.list-departamentos {
+	.list-municipios {
 		width: 100%;
 		max-width: 850px;
 		margin: 1.6rem auto 3.93rem;
@@ -961,12 +985,15 @@ footer {
 				border-color: rgba(65, 156, 255, 1);
 				background-color: transparent;;
 			}
-			a.btn-primary:hover {
+			a.btn-primary:hover, a.active {
 				color: #fff;
 				border-color: rgba(41, 58, 125, 1);
 				background-color: rgba(41, 58, 125, 1);
 			}
 		}
+	}
+	.contenido .lista  {
+		margin: 1.23rem auto 0;
 	}
 }
 
@@ -1160,6 +1187,20 @@ footer {
 			border-left: 1px solid #dedede;
 		}
 	}
+	.comentarios {
+		width: 90%;
+		max-width: 655px;
+		margin: 3.93rem auto 0;
+		h4 {
+			font-family: 'roboto_slabregular';
+			font-size: 2.14rem;
+			color: rgba(86, 162, 50, 1);
+			margin-bottom: 0.93rem;
+		}
+		div {
+			border: 1px solid rgba(151, 151, 151, 1);
+		}
+	}
 }
 
 /* Estilos de una noticia */
@@ -1291,6 +1332,7 @@ footer {
 			top: 0;
 			right: 0;
 			width: 110px;
+			height: 100%;
 			display: table;
 			background-color: rgba(184, 24, 43, 1);
 			border-top-right-radius: 3px;
@@ -1378,7 +1420,6 @@ footer {
 /* Estilos Municipio */
 .municipio {
 	.row {
-
 		width: 100%;
 		max-width: 950px;
 		margin: 8.28rem auto 0;		
@@ -1391,11 +1432,12 @@ footer {
 			max-width: 261px;
 			margin: 8px 26px 18px 0;
 		}
-		.col-md-4.push-md-8 {
+		.cont-menu{
 			position: relative;
 		}
 		.sub-menu {
 			margin-top: 5px;
+			width: 100%;
 			li {
 				margin-bottom: 10px;
 				padding: 0;
@@ -1469,7 +1511,8 @@ footer {
 			margin-bottom: 15px;
 		}
 		a {
-			display: inline-block;			
+			display: inline-block;
+			width: 90%;		
 			max-width: 164px;
 			height: 115px;
 			img {
@@ -1575,6 +1618,41 @@ footer {
 			}
 		}
 	}
+}
+
+#cboxClose, #cboxClose:hover {
+	width: 30px;
+	height: 30px;
+	top: -15px;
+	right: -15px;
+	bottom: auto;
+	text-indent: -9999px;
+	background: url('../img/close.png') no-repeat;
+	z-index: 20000 !important;
+}
+#cboxPrevious, #cboxNext {
+	width: 30px;
+	height: 30px;
+	top: 50%;
+	margin-top: -15px;
+}
+#cboxPrevious {
+	background: url('../img/prev.png') no-repeat !important;
+	left: 10px;
+}
+#cboxNext {
+	background: url('../img/next.png') no-repeat !important;
+	right: 10px;
+}
+#cboxOverlay {
+	background-color: rgb(119, 119, 119);
+	opacity: 0.7;
+}
+#cboxContent {
+	margin: 16px;
+}
+#cboxLoadedContent {
+	padding: 7px;
 }
 
 @import "responsive.scss";
