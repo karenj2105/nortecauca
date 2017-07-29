@@ -1,10 +1,9 @@
 
 @import "font-awesome.min.scss";
-@import "prettyPhoto.scss";
-@import "price-range.scss";
 @import "animate.scss";
-@import "main.scss";
-@import "responsivetienda.scss";
+
+/*@import "responsivetienda.scss";*/
+
 
 html {
 	font-size: 14px;	
@@ -1654,5 +1653,5 @@ footer {
 #cboxLoadedContent {
 	padding: 7px;
 }
-
+@import "main.scss";
 @import "responsive.scss";
