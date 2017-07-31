@@ -72,14 +72,10 @@
 				$('header .navbar-inverse .navbar-toggler-icon').removeClass('home');
 			}
 		});
-	}
+	}	
 
-	hoverRedes("facebook");
-	hoverRedes("twitter");
-	hoverRedes("google");
-	
 	/*Envio y validacion formulario de contacto */
-	/*var valiEmailReg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+	var valiEmailReg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 	$("#formContacto").submit( function() {
 		var valid = true;
 		var nombre = $.trim($("#nombre").val());
@@ -90,18 +86,18 @@
 		$("#formContacto .error").remove();
 		if( nombre == "" ) {
 			valid = false;
-			$("#nombre").focus().before("<span class='error nombre'>Ingrese su nombre</span>");
-			$("#nombre").css('border', '1px solid red');
+			$("#nombre").focus().after("<div class='error nombre'><span>Ingrese su nombre</span></div>");
+			$("#nombre").css('border', '2px solid #fe7485');
 		}
 		if( email == "" || !valiEmailReg.test(email) ) {
 			valid = false;
-			$("#email").focus().before("<span class='error email'>Ingrese un correo electrónico válido</span>");
-			$("#email").css('border', '1px solid red');
+			$("#email").focus().after("<div class='error email'><span>Ingrese un correo electrónico válido</span></div>");
+			$("#email").css('border', '2px solid #fe7485');
 		} 
 		if( mensaje == "" ) {
 			valid = false;
-			$("#mensaje").focus().before("<span class='error mensaje'>Ingrese un mensaje</span>");
-			$("#mensaje").css('border', '1px solid red');
+			$("#mensaje").focus().after("<div class='error mensaje'><span>Ingrese un mensaje</span></div>");
+			$("#mensaje").css('border', '2px solid #fe7485');
 		}
 
 		if(!valid) {
@@ -119,15 +115,15 @@
 					$btn.button('reset');
 					if (respuesta.status == 'success'){
 						$('.msg').text('Mensaje enviado').addClass('msg-ok').fadeIn(300);
-						$('.msg').css("display", "inline-block");
+						$('.msg').css("display", "block");
 						$("#formContacto")[0].reset();
 						$("#email").css('border','1px solid rgba(186, 186, 186, 1)');
 						setTimeout(function() {
 							$('.msg').fadeOut(300);
 						}, 2000);
 					} else if (respuesta.status == 'error') {
-						$('.msg').text('Hubo un error').addClass('msg-error').fadeIn(300);
-						$('.msg').css("display", "inline-block");
+						$('.msg').text('Hubo un error').addClass('msg-error').fadeIn(1500);
+						$('.msg').css("display", "block");
 						setTimeout(function() {
 							$('.msg').fadeOut(300);
 						}, 2000);
@@ -135,7 +131,7 @@
 				},
 				error: function() {
 					$btn.button('reset');
-					$('.msg').text('Hubo un error').addClass('msg-error').fadeIn(300);
+					$('.msg').text('Hubo un error').addClass('msg-error').fadeIn(1500);
 					setTimeout(function() {
 						$('.msg').fadeOut(300);
 					}, 2000);
@@ -148,54 +144,45 @@
 	$("#nombre").keyup( function() {
 		if( $.trim($(this).val()) != "" ) {
 			$(".error.nombre").fadeOut();
-			$("#nombre").css('border','1px solid rgba(186, 186, 186, 1)');
+			$("#nombre").css('border', '2px solid #cad4d6');
 		}
 	});
 
 	$("#nombre").change( function() {
 		if( $.trim($(this).val()) == "" ) {
 			$(".error.nombre").hide();
-			$("#nombre").focus().before("<span class='error nombre'>Ingrese su nombre</span>");
-			$("#nombre").css('border', '1px solid red');
+			$("#nombre").focus().after("<div class='error nombre'><span>Ingrese su nombre</span></div>");
+			$("#nombre").css('border', '2px solid #fe7485');
 		}
 	});
 
 	$("#mensaje").keyup( function() {
 		if( $.trim($(this).val()) != "" ) {
 			$(".error.mensaje").fadeOut();
-			$("#mensaje").css('border','1px solid rgba(186, 186, 186, 1)');
+			$("#mensaje").css('border','2px solid #cad4d6');
 		}
 	});
 
 	$("#mensaje").change( function() {
 		if( $.trim($(this).val()) == "" ) {
 			$(".error.mensaje").hide();
-			$("#mensaje").focus().before("<span class='error comentario'>Ingrese un mensaje</span>");
-			$("#mensaje").css('border', '1px solid red');
+			$("#mensaje").focus().after("<div class='error mensaje'><span>Ingrese un mensaje</span></div>");
+			$("#mensaje").css('border', '2px solid #fe7485');
 		}
 	});
 
 	$("#email").keyup( function() {
 		if( $.trim($(this).val()) != "" && valiEmailReg.test($.trim($(this).val()))) {
 			$(".error.email").fadeOut();
-			$("#email").css('border','1px solid rgba(186, 186, 186, 1)');
+			$("#email").css('border','2px solid #cad4d6');
 		}
 	});
 
 	$("#email").change( function() {
 		if( $.trim($(this).val()) == "" && !valiEmailReg.test($.trim($(this).val()))) {
 			$(".error.email").hide();
-			$("#email").focus().before("<span class='error email'>Ingrese un correo electrónico válido</span>");
-			$("#email").css('border', '1px solid red');
+			$("#email").focus().after("<div class='error email'><span>Ingrese un correo electrónico válido</span></div>");
+			$("#email").css('border', '2px solid #fe7485');
 		}
-	});*/
+	});
 })(jQuery);
-
-function hoverRedes($red) {
-	$(".redes-int ul li." + $red + "").mouseover(function() {
-		$(this).transition({ y: '-10px', opacity: 1 }, 600, 'ease');
-	});
-	$(".redes-int ul li." + $red + "").mouseleave(function() {
-		$(this).transition({ y: '0px', opacity: 1 }, 600, 'ease');
-	});
-}

@@ -3434,13 +3434,19 @@ footer {
       display: inline-block;
       margin: 4px; }
       .redes-int ul li a {
+        display: inline-block;
         width: 40px;
-        height: 40px;
-        overflow: hidden;
-        text-indent: -9999px; }
+        height: 40px; }
         .redes-int ul li a img {
           width: 40px;
           height: 40px; }
+      .redes-int ul li a:hover {
+        -webkit-transition: 900ms;
+        transition: 900ms;
+        /* IE 9 */
+        -webkit-transform: translate(0px, -10px);
+        /* Safari */
+        transform: translate(0px, -10px); }
 
 /* Estilos contenido */
 .contenido {
@@ -4035,12 +4041,28 @@ footer {
   .contacto form .btn-primary:hover {
     background-color: #9c570d;
     border-color: #9c570d; }
+  .contacto form .msg {
+    border-radius: 10px;
+    color: white;
+    display: block;
+    font-weight: bold;
+    margin-top: 13px;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px; }
+  .contacto form .msg-ok {
+    background: #589d05; }
+  .contacto form .msg-error {
+    background: #fe7485; }
   .contacto form .form-group {
     position: relative; }
     .contacto form .form-group .error {
       position: absolute;
       bottom: 0;
       right: -257px;
+      max-width: 250px;
+      min-width: 250px;
       display: inline-block;
       background: url("../img/ico_informacion.png") no-repeat left center;
       background-size: 24px 24px;
@@ -4709,7 +4731,9 @@ footer {
     position: relative;
     right: auto;
     bottom: auto;
-    margin-top: 6px; }
+    margin-top: 6px;
+    max-width: 100% !important;
+    min-width: auto !important; }
 
   #carrusel-principal .carousel-caption.d-md-block {
     bottom: 10px; }

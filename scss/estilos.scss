@@ -817,15 +817,22 @@ footer {
 			display: inline-block;
 			margin: 4px;
 			a {
+				display: inline-block;
 				width: 40px;
 				height: 40px;
-				overflow: hidden;
-				text-indent: -9999px;
-
 				img {
 					width: 40px;
 					height: 40px;
 				}
+			}
+			a:hover {
+				-webkit-transition: 900ms;
+				-moz-transition: 900ms;
+				-o-transition: 900ms;
+				transition: 900ms;
+				-ms-transform: translate(0px, -10px); /* IE 9 */
+				-webkit-transform: translate(0px, -10px); /* Safari */
+				transform: translate(0px, -10px);
 			}
 		}
 	}
@@ -1576,12 +1583,31 @@ footer {
 			background-color: #9c570d;
 			border-color: #9c570d;;
 		}
+		.msg {
+			border-radius: 10px;
+			color: white;
+			display: block;
+			font-weight: bold;
+			margin-top: 13px;
+			padding: 10px 15px;
+			text-align: center;
+			text-transform: uppercase;
+			border-radius: 3px;
+		}
+		.msg-ok {
+			background: #589d05;
+		}
+		.msg-error {
+			background: rgba(254, 116, 133, 1)
+		}
 		.form-group {
 			position: relative;
 			.error {
 				position: absolute;
 				bottom: 0;
 				right: -257px;
+				max-width: 250px;
+				min-width: 250px;
 				display: inline-block;
 				background: url('../img/ico_informacion.png') no-repeat left center;
 				background-size: 24px 24px;
