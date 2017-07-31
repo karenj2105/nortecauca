@@ -4071,39 +4071,18 @@ footer {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg); }
 
-#cboxClose, #cboxClose:hover {
-  width: 30px;
-  height: 30px;
-  top: -15px;
-  right: -15px;
-  bottom: auto;
-  text-indent: -9999px;
-  background: url("../img/close.png") no-repeat;
-  z-index: 20000 !important; }
-
-#cboxPrevious, #cboxNext {
-  width: 30px;
-  height: 30px;
-  top: 50%;
-  margin-top: -15px; }
-
-#cboxPrevious {
-  background: url("../img/prev.png") no-repeat !important;
-  left: 10px; }
-
-#cboxNext {
-  background: url("../img/next.png") no-repeat !important;
-  right: 10px; }
-
-#cboxOverlay {
-  background-color: #777777;
-  opacity: 0.7; }
-
-#cboxContent {
-  margin: 16px; }
-
-#cboxLoadedContent {
-  padding: 7px; }
+.segundo-nivel .contenido .lista {
+  margin-top: 50px; }
+  .segundo-nivel .contenido .lista h4 {
+    width: auto;
+    max-width: auto; }
+  .segundo-nivel .contenido .lista div {
+    margin-bottom: 40px; }
+.segundo-nivel .contenido .btn-primary.act {
+  width: 90%;
+  max-width: 300px;
+  height: 70px;
+  margin-bottom: 35px; }
 
 .tienda {
   /***** *Estilos cart* *****/
