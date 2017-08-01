@@ -2767,9 +2767,6 @@ html {
 body {
   font-family: 'robotoregular'; }
 
-.clear {
-  clear: both; }
-
 h2, h3 {
   font-family: 'roboto_slabbold'; }
 
@@ -2797,8 +2794,6 @@ header .navbar {
     header .navbar a.lupa .ico-buscador::before {
       color: #2a3b7d;
       font-size: 20px; }
-  header .navbar a.lupa.blanco .ico-buscador::before {
-    color: #fff; }
 header .info {
   position: absolute;
   width: 100%;
@@ -2845,11 +2840,48 @@ header h5 {
   font-size: 0.86rem;
   margin-top: 11px; }
 
-.ico-carrito.active::before {
+.home header .navbar {
+  background-color: #fff;
+  padding: 17.5px;
+  -webkit-transition: 200ms;
+  transition: 200ms; }
+.home header .navbar-inverse .navbar-nav .nav-link {
   color: #2a3b7d; }
+.home header .navbar-brand img, .home header .info h5, .home header .info span {
+  display: none; }
+.home header .navbar-brand img.scroll, .home header a.lupa, .home header .carrito span.punto {
+  display: inline-block; }
+.home header .info {
+  color: #2a3b7d;
+  height: 22px; }
+.home header .ico-carrito::before {
+  color: #2a3b7d; }
+.home header .info .container > div {
+  margin-top: 39px; }
+.home header .info .carrito span.ico-carrito {
+  border-left: 1px solid #2a3b7d; }
 
-.ico-carrito.interna::before {
+.interna header .navbar {
+  background-color: #293a7d;
+  padding: 17.5px; }
+.interna header .navbar-inverse .navbar-nav .nav-link {
   color: #fff; }
+.interna header .navbar-brand img {
+  width: 200px; }
+.interna header .info {
+  color: #fff;
+  border-bottom: none;
+  height: 22px; }
+.interna header .info h5, .interna header .info span, .interna header .navbar-brand img.scroll {
+  display: none; }
+.interna header .carrito span, .interna header a.lupa, .interna header .carrito span.punto {
+  display: block; }
+.interna header .info .container > div {
+  margin-top: 39px; }
+.interna header .navbar a.lupa .ico-buscador::before {
+  color: #fff; }
+.interna header .info .carrito span.ico-carrito {
+  border-left: 1px solid white; }
 
 /* Estilos carrusel principal */
 #carrusel-principal .carousel-item {
@@ -2931,33 +2963,33 @@ header h5 {
 .form-control:-ms-input-placeholder {
   color: #cdd4dc; }
 
-form {
+#buscador {
   margin-top: -40px; }
-  form .container {
+  #buscador .container {
     padding: 0 75px; }
-    form .container .row {
+    #buscador .container .row {
       border-radius: 4px;
       -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
               box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
       background-color: #ffffff; }
-      form .container .row div {
+      #buscador .container .row div {
         padding: 0; }
-        form .container .row div .form-control {
+        #buscador .container .row div .form-control {
           height: 80px !important;
           border: none;
           font-family: 'robotoregular';
           font-size: 1.14rem;
           width: 100% !important;
           color: #444444; }
-        form .container .row div input[type="text"] {
+        #buscador .container .row div input[type="text"] {
           padding: 7px 37px; }
-        form .container .row div .select {
+        #buscador .container .row div .select {
           width: 100%;
           overflow: hidden;
           background: #fff url("../img/flecha_abajo.svg") no-repeat 93% center;
           font-size: 1.14rem;
           font-family: 'robotoregular'; }
-          form .container .row div .select select {
+          #buscador .container .row div .select select {
             padding: 5px 8px 5px 25px;
             width: 130%;
             font-size: 1.14rem;
@@ -2969,17 +3001,17 @@ form {
             -webkit-appearance: none;
                -moz-appearance: none;
                     appearance: none; }
-          form .container .row div .select .border {
+          #buscador .container .row div .select .border {
             display: inline-block;
             height: 57px;
             width: 1px;
             margin: 11px;
             background-color: #cdd4dd; }
-        form .container .row div select.form-control.placeholder {
+        #buscador .container .row div select.form-control.placeholder {
           color: #cdd4dc; }
-        form .container .row div select.form-control {
+        #buscador .container .row div select.form-control {
           color: #444444; }
-      form .container .row button.btn-primary {
+      #buscador .container .row button.btn-primary {
         height: 80px;
         width: 101%;
         background: url("../img/lupa.svg") center center no-repeat;
@@ -2990,7 +3022,7 @@ form {
         cursor: pointer;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0; }
-      form .container .row button.btn-primary:hover {
+      #buscador .container .row button.btn-primary:hover {
         background-color: #27600b; }
 
 /* EStilos footer */
@@ -3353,7 +3385,7 @@ footer {
     .municipio-mes .container-responsive .informacion h2 span {
       display: inline-block;
       vertical-align: middle;
-      max-width: 240px; }
+      max-width: 250px; }
     .municipio-mes .container-responsive .informacion h2 span.linea {
       background-color: #f4d101;
       height: 1px;
@@ -4795,8 +4827,11 @@ footer {
     position: absolute;
     right: 62px;
     top: 22px; }
-  header .navbar-inverse .navbar-toggler-icon.home {
+
+  .home header .navbar-inverse .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  .home header .navbar a.lupa .ico-buscador::before {
+    color: #2a3b7d; }
 
   #carrusel-principal {
     height: 100vh; }
@@ -4884,7 +4919,10 @@ footer {
   .carruseles .carousel-item .info {
     text-align: center; }
     .carruseles .carousel-item .info .fecha {
-      margin-left: 22px; } }
+      margin-left: 22px; }
+
+  .municipio-mes .container-responsive .informacion h2 span {
+    max-width: 215px; } }
 @media (max-width: 768px) {
   #buscador .container .row {
     margin: 0; }
@@ -5029,5 +5067,11 @@ footer {
     float: none;
     display: block;
     margin-bottom: 1rem; } }
+@media (max-width: 480px) {
+  .municipio-mes .container-responsive .informacion h2 span {
+    max-width: 195px; }
+  .municipio-mes .container-responsive .informacion h2 span.linea {
+    width: 30px;
+    max-width: 30px; } }
 
 /*# sourceMappingURL=estilos.css.map */

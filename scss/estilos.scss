@@ -4,15 +4,11 @@
 
 /*@import "responsivetienda.scss";*/
 
-
 html {
 	font-size: 14px;	
 }
 body {
 	font-family: 'robotoregular';
-}
-.clear {
-	clear: both;
 }
 h2, h3 {
 	font-family: 'roboto_slabbold';
@@ -46,11 +42,6 @@ header {
 			.ico-buscador::before {
 				color: rgba(42, 59, 125, 1);
 				font-size: 20px;
-			}
-		}
-		a.lupa.blanco {
-			.ico-buscador::before {
-				color: #fff;
 			}
 		}
 	}
@@ -111,13 +102,45 @@ header {
 	}
 }
 
-.ico-carrito.active::before {
-	color: rgba(42, 59, 125, 1);
+.home header {
+	.navbar {
+		background-color: #fff;
+		padding: 17.5px;
+		-webkit-transition: 200ms;
+		-moz-transition: 200ms;
+		-o-transition: 200ms;
+		transition: 200ms;
+	}
+	.navbar-inverse .navbar-nav .nav-link { color: rgba(42, 59, 125, 1);}
+	.navbar-brand img, .info h5, .info span { display: none;}
+	.navbar-brand img.scroll, a.lupa, .carrito span.punto { display: inline-block;}
+	.info { 
+		color: rgba(42, 59, 125, 1);
+		height: 22px;
+	}
+	.ico-carrito::before { color: rgba(42, 59, 125, 1);}
+	.info .container > div { margin-top: 39px; }
+	.info .carrito span.ico-carrito { border-left: 1px solid rgba(42, 59, 125, 1);}
+}
+.interna header {
+	.navbar {
+		background-color: rgba(41, 58, 125, 1);
+		padding: 17.5px;
+	}
+	.navbar-inverse .navbar-nav .nav-link {color: #fff}
+	.navbar-brand img {	width :200px;}
+	.info {
+		color: #fff;
+		border-bottom: none;
+		height: 22px;
+	}
+	.info h5, .info span, .navbar-brand img.scroll { display: none;}
+	.carrito span, a.lupa, .carrito span.punto { display: block;}
+	.info .container > div { margin-top: 39px;}
+	.navbar a.lupa .ico-buscador::before { color: #fff;}
+	.info .carrito span.ico-carrito { border-left: 1px solid rgba(255, 255, 255, 1);}
 }
 
-.ico-carrito.interna::before {
-	color: #fff;
-}
  /* Estilos carrusel principal */
 
 #carrusel-principal {
@@ -212,7 +235,7 @@ header {
 .form-control:-moz-placeholder { color:  rgba(205, 212, 220, 1);}
 .form-control::-moz-placeholder { color:  rgba(205, 212, 220, 1);}
 .form-control:-ms-input-placeholder { color:  rgba(205, 212, 220, 1);}
-form {
+#buscador {
 	margin-top: -40px;
 	.container {
 		padding: 0 75px;
@@ -716,7 +739,7 @@ footer {
 				span {
 					display: inline-block;
 					vertical-align: middle;
-					max-width: 240px;
+					max-width: 250px;
 				}
 				span.linea {
 					background-color:rgba(244, 209, 1, 1);

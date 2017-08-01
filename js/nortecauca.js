@@ -15,64 +15,34 @@
 		});
 	});	
 
-	if ($('body').hasClass('interna')) {
-		$('header .navbar').css('background-color', "rgba(41, 58, 125, 1)");
-		$('header .navbar').css('padding', "17.5px");
-		$('.navbar-inverse .navbar-nav .nav-link').css('color', '#fff');
-		$('.navbar-brand img').show().css('width', '200px');
-		$('.navbar-brand img.scroll').hide();
-		$('.info').css('color', '#fff').css('border-bottom', 'none');
-		$('.info h5').hide();
-		$('.ico-carrito').removeClass('active');
-		$('header .info span').hide();
-		$('.carrito span').show();
-		$('header .info .container > div').css('margin-top', '39px');
-		$('a.lupa').css('display', 'inline-block');
-		$('header .info').css('height', '22px');
-		$('header .navbar a.lupa').addClass('blanco');
-		$('header .info .carrito span.ico-carrito').css('border-left', '1px solid rgba(255, 255, 255, 1)');
-	} else {
-		$(window).scroll(function() {
-			var posicion = $(window).scrollTop();
-			//console.log(posicion);
-			if(posicion > 0) {
-				$('header .navbar').css('background-color', "#fff");
-				$('header .navbar').css('padding', "17.5px");
-				$('.navbar-inverse .navbar-nav .nav-link').css('color', 'rgba(42, 59, 125, 1)');
-				$('.navbar-brand img').hide();
-				$('.navbar-brand img.scroll').show();
-				$('.info').css('color', 'rgba(42, 59, 125, 1)');
-				$('.info h5').hide();
-				$('.ico-carrito').addClass('active');
-				$('header .info span').hide();
-				$('.carrito span').show();
-				$('header .info .container > div').css('margin-top', '39px');
-				$('a.lupa').css('display', 'inline-block');
-				$('header .info').css('height', '22px');
-				$('header .navbar a.lupa').removeClass('blanco');
-				$('header .info .carrito span.ico-carrito').css('border-left', '1px solid rgba(42, 59, 125, 1)');
-				$('header .navbar a.lupa .ico-buscador').addClass('addcolor');
-				$('header .navbar-inverse .navbar-toggler-icon').addClass('home');
-			} else {
-				$('header .navbar').css('background-color', "transparent");
-				$('header .navbar').css('padding', "43px 17.5px 17.5px");
-				$('.navbar-inverse .navbar-nav .nav-link').css('color', 'rgba(255, 255, 255, 1)');
-				$('.navbar-brand img').show();
-				$('.navbar-brand img.scroll').hide();
-				$('.info').css('color', 'rgba(255, 255, 255, 1)');
-				$('.info h5').show();
-				$('.ico-carrito').removeClass('active');
-				$('header .info span').show();
-				$('.carrito span.punto').hide();
-				$('header .info .container > div').css('margin-top', '7px');
-				$('a.lupa').css('display', 'none');
-				$('header .info').css('height', '37px');
-				$('header .info .carrito span.ico-carrito').css('border-left', '1px solid rgba(255, 255, 255, 0.2)');
-				$('header .navbar a.lupa .ico-buscador').removeClass('addcolor');
-				$('header .navbar-inverse .navbar-toggler-icon').removeClass('home');
-			}
-		});
-	}	
+	
+	$(window).scroll(function() {
+		var posicion = $(window).scrollTop();
+		//console.log(posicion);
+		if(posicion > 0 && !$('body').hasClass('interna')) {
+			$('body').addClass('home');
+		} else {
+			$('body').removeClass('home');
+		}
+	});
+
+	// lleva al buscador
+	$('header a.lupa').bind('click', function(event) {
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: ($($anchor.attr('href')).offset().top - 150)
+		}, 1250, 'easeInOutExpo');
+		event.preventDefault();
+	});
+
+	// Hace scroll en el submenu de la vista de municipios
+	$('#sidebar .list-group-item a').bind('click', function(event) {
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: ($($anchor.attr('href')).offset().top - 180)
+		}, 1250, 'easeInOutExpo');
+		event.preventDefault();
+	});
 
 	/*Envio y validacion formulario de contacto */
 	var valiEmailReg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
@@ -184,14 +154,5 @@
 			$("#email").focus().after("<div class='error email'><span>Ingrese un correo electrónico válido</span></div>");
 			$("#email").css('border', '2px solid #fe7485');
 		}
-	});
-
-	// Hace scroll en el submenu de la vista de municipios
-	$('#sidebar .list-group-item a').bind('click', function(event) {
-		var $anchor = $(this);
-		$('html, body').stop().animate({
-			scrollTop: ($($anchor.attr('href')).offset().top - 180)
-		}, 1250, 'easeInOutExpo');
-		event.preventDefault();
-	});
+	});	
 })(jQuery);
