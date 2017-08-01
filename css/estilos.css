@@ -3941,8 +3941,10 @@ footer {
         border-radius: 8px;
         padding: 0.99rem 0; }
       .municipio .row .sub-menu li a:hover {
-        text-decoration: none;
+        text-decoration: none !important;
         background-color: #9c570d; }
+      .municipio .row .sub-menu li a:focus {
+        text-decoration: none; }
 .municipio .informacion {
   position: relative;
   max-width: 100%;

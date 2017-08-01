@@ -185,4 +185,13 @@
 			$("#email").css('border', '2px solid #fe7485');
 		}
 	});
+
+	// Hace scroll en el submenu de la vista de municipios
+	$('#sidebar .list-group-item a').bind('click', function(event) {
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: ($($anchor.attr('href')).offset().top - 180)
+		}, 1250, 'easeInOutExpo');
+		event.preventDefault();
+	});
 })(jQuery);
