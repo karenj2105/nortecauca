@@ -3841,13 +3841,15 @@ footer {
       right: 0;
       width: 110px;
       height: 100%;
-      display: table;
+      display: inline-block;
       background-color: #b8182b;
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
       .col-md-8 .descarga li a .ico-descarga, .col-lg-8 .descarga li a .ico-descarga {
-        display: table-cell;
-        vertical-align: middle; }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -8.5px 0 0 -7px; }
       .col-md-8 .descarga li a .ico-descarga:before, .col-lg-8 .descarga li a .ico-descarga:before {
         font-size: 17px; }
     .col-md-8 .descarga li a:hover, .col-lg-8 .descarga li a:hover {
