@@ -3448,13 +3448,15 @@ footer {
 
 /* Estilos resdes páginas */
 .redes-int {
+  position: relative !important;
   width: 90%;
   max-width: 435px;
   margin: 0 auto;
   text-align: center;
   border: 1px solid #cacaca;
   border-style: dashed;
-  padding: 9px 0; }
+  padding: 9px 0;
+  z-index: 0; }
   .redes-int span {
     font-family: 'roboto_slabbold';
     color: #444444;
@@ -3645,13 +3647,15 @@ footer {
   margin: -1.5rem 0 5.93rem; }
   .cnt-pagination .pagination {
     display: inline-block;
+    max-width: 95%;
     border-radius: 3px;
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
             box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
     min-height: 54px;
-    margin-bottom: 0;
+    margin: 0 auto;
     padding-left: 1px; }
     .cnt-pagination .pagination li {
+      color: #444444;
       display: inline-block;
       padding: 7px 0;
       height: 100%; }
@@ -3662,11 +3666,10 @@ footer {
         border: none;
         font-size: 1.08rem;
         border-left: 2px solid #f6f6f6; }
-        .cnt-pagination .pagination li .page-link .ico-flecha::before {
-          color: #444444; }
+      .cnt-pagination .pagination li .ico-flecha::before {
+        color: #444444; }
       .cnt-pagination .pagination li .prev {
-        border-left: none; }
-      .cnt-pagination .pagination li .prev {
+        border-left: none;
         -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg); }
       .cnt-pagination .pagination li .page-link:hover {
@@ -3674,6 +3677,10 @@ footer {
         color: #b8182b; }
         .cnt-pagination .pagination li .page-link:hover .ico-flecha::before {
           color: #b8182b; }
+  .cnt-pagination .page-item.active .page-link {
+    background-color: #fff;
+    color: #b8182b;
+    font-weight: bold; }
 
 /* Estilos artículo blog */
 .blog-articulo .cont-img {
@@ -4779,7 +4786,15 @@ footer {
   #buscador {
     margin-top: -20px; }
     #buscador .container {
-      padding: 0 17.5px; } }
+      padding: 0 17.5px; }
+
+  #list-blog div img, #list-blog div h3, #list-blog div span {
+    max-width: 90%;
+    margin: 0 5%; }
+  #list-blog div h3 {
+    margin: 1.36rem 5% 0.53rem; }
+  #list-blog div h4 {
+    margin: 0 5% 0.64rem; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   footer .col-lg-2 {
     max-width: 14%; }
@@ -4998,7 +5013,15 @@ footer {
       margin-top: -17.5px; }
     .blog-articulo .art-sig-ant div .next a.flecha {
       right: 4px;
-      margin-top: -5.5px; } }
+      margin-top: -5.5px; }
+
+  .redes-int.fixed-bottom {
+    position: fixed !important;
+    z-index: 1030;
+    border: none;
+    padding: 0; }
+    .redes-int.fixed-bottom span {
+      display: none; } }
 @media (min-width: 576px) and (max-width: 767px) {
   #eventos {
     max-width: 351px; } }

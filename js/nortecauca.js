@@ -35,11 +35,14 @@
 		event.preventDefault();
 	});
 
+	$top = 190;
+	if($(window).width() <= 991) $top = 210;
+
 	// Hace scroll en el submenu de la vista de municipios
 	$('#sidebar .list-group-item a').bind('click', function(event) {
 		var $anchor = $(this);
 		$('html, body').stop().animate({
-			scrollTop: ($($anchor.attr('href')).offset().top - 180)
+			scrollTop: ($($anchor.attr('href')).offset().top - $top)
 		}, 1250, 'easeInOutExpo');
 		event.preventDefault();
 	});

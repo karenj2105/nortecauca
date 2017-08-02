@@ -38,6 +38,20 @@
 			padding: 0 17.5px;
 		}
 	}
+	#list-blog {
+		div {
+			img, h3, span {
+				max-width: 90%;
+				margin: 0 5%;
+			}
+			h3 {
+				margin: 1.36rem 5% 0.53rem;
+			}
+			h4 {
+				margin: 0 5% 0.64rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -344,6 +358,15 @@
 		div .next a.flecha {
 			right: 4px;
 			margin-top: -5.5px;
+		}
+	}
+	.redes-int.fixed-bottom {
+		position: fixed !important;
+		z-index: 1030;
+		border: none;
+		padding: 0;
+		span {
+			display: none;
 		}
 	}
 }
