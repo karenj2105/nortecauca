@@ -98,7 +98,14 @@
 				}
 			}
 		}
-		img {
+		.nav-item {
+			margin-top: 0px;
+			.submenu {
+				width: 100%;
+				left: 0;
+			}
+		}
+			img {
 			max-width: 150px !important;
 			width: 150px !important;
 		}

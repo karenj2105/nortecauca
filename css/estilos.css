@@ -2776,7 +2776,8 @@ header .navbar-inverse .navbar-nav .nav-link:focus {
   font-size: 0.93rem;
   color: white;
   border-bottom: 3px solid transparent; }
-header .navbar-inverse .navbar-nav .nav-link:hover {
+header .navbar-inverse .navbar-nav .nav-link:hover
+ {
   border-bottom: 3px solid #b8182b; }
 header .navbar-brand img {
   max-width: 236px; }
@@ -2794,6 +2795,48 @@ header .navbar {
     header .navbar a.lupa .ico-buscador::before {
       color: #2a3b7d;
       font-size: 20px; }
+header .nav-item {
+  position: relative;
+  padding-bottom: 17px;
+  margin-top: 16px; }
+  header .nav-item .submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: -50%;
+    width: 230px;
+    padding: 15px 0 13px;
+    background-color: #b8182b;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    z-index: 100; }
+    header .nav-item .submenu li {
+      overflow: hidden; }
+      header .nav-item .submenu li a {
+        display: inline-block;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        padding: 10.25px 0; }
+      header .nav-item .submenu li a:hover {
+        background-color: #9d1223;
+        text-decoration: none; }
+  header .nav-item .submenu::before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    background-color: #b8182b;
+    width: 17px;
+    height: 17px;
+    top: -8.5px;
+    left: 50%;
+    margin-left: -8.5px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
 header .info {
   position: absolute;
   width: 100%;
@@ -4822,6 +4865,11 @@ footer {
         color: #fff; }
       header .navbar a.lupa .ico-buscador.addcolor::before {
         color: #2a3b7d; }
+  header .nav-item {
+    margin-top: 0px; }
+    header .nav-item .submenu {
+      width: 100%;
+      left: 0; }
   header img {
     max-width: 150px !important;
     width: 150px !important; }

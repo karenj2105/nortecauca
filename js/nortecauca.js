@@ -47,6 +47,13 @@
 		event.preventDefault();
 	});
 
+	$(".navbar-nav .nav-item").mouseover(function() {
+		$(this).children("ul").css("display", "block");
+	});
+	$(".navbar-nav .nav-item").mouseleave(function() {
+		$(this).children("ul").css("display", "none");
+	});
+
 	/*Envio y validacion formulario de contacto */
 	var valiEmailReg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 	$("#formContacto").submit( function() {
